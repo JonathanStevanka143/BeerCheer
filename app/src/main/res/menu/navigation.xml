@@ -2,18 +2,28 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/navigation_home"
-        android:icon="@drawable/ic_home_black_24dp"
-        android:title="@string/title_home" />
+        android:title="@string/combination"
+        android:icon="@drawable/combination"
+        android:id="@+id/navigation_combination"/>
 
     <item
-        android:id="@+id/navigation_dashboard"
-        android:icon="@drawable/ic_dashboard_black_24dp"
-        android:title="@string/title_dashboard" />
+        android:title="@string/beerType"
+        android:id="@+id/navigation_beerType"
+        android:icon="@drawable/beer_types"/>
 
     <item
-        android:id="@+id/navigation_notifications"
-        android:icon="@drawable/ic_notifications_black_24dp"
-        android:title="@string/title_notifications" />
+        android:title="@string/home"
+        android:icon="@drawable/home"
+        android:id="@+id/navigation_home"/>
+
+    <item
+        android:title="@string/beerColor"
+        android:icon="@drawable/color_calculator"
+        android:id="@+id/navigation_beerColor"/>
+
+    <item
+        android:title="@string/aboutUs"
+        android:icon="@drawable/contact_us"
+        android:id="@+id/navigation_aboutUs"/>
 
 </menu>
