@@ -3,4 +3,11 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+
+    <!--Navigation Bar Items-->
+    <string name="beerType">Beer Types</string>
+    <string name="beerColor">Beer Color</string>
+    <string name="combination">Combination</string>
+    <string name="home">Home</string>
+    <string name="aboutUs">About Us</string>
 </resources>
