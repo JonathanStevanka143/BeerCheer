@@ -1,37 +1,41 @@
 package com.example.utsav.beercheer;
 
 import android.app.ActionBar;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements aboutUsFragment.OnFragmentInteractionListener{
 
     private TextView mTextMessage;
-
+    FragmentManager fm;
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            FragmentTransaction transaction = fm.beginTransaction();
+
             switch (item.getItemId()) {
                 case R.id.navigation_combination:
-                    mTextMessage.setText(R.string.combination);
                     return true;
                 case R.id.navigation_beerType:
-                    mTextMessage.setText(R.string.beerType);
                     return true;
                 case R.id.navigation_home:
-                    mTextMessage.setText(R.string.title_home);
                     return true;
                 case R.id.navigation_beerColor:
-                    mTextMessage.setText(R.string.beerColor);
                     return true;
                 case R.id.navigation_aboutUs:
-                    mTextMessage.setText(R.string.aboutUs);
+                    transaction.replace(R.id.content, new aboutUsFragment());
+                    transaction.addToBackStack(null);
+                    transaction.commit();
                     return true;
             }
             return false;
@@ -42,8 +46,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        fm = getSupportFragmentManager();
 
-        mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
@@ -51,4 +55,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
+    }
 }
