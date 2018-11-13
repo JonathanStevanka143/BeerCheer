@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimary2"
+    android:layout_height="match_parent"
+    tools:context=".CreditsActivity">
+
+    <TextView
+        android:padding="6sp"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/viewpager" />
+
+    <TextView
+        android:padding="10sp"
+        android:textSize="12dp"
+        android:textColor="#000000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/viewpagerSource" />
+
+    <TextView
+        android:padding="6sp"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bottomNavigation" />
+
+    <TextView
+        android:padding="10sp"
+        android:textSize="12dp"
+        android:textColor="#000000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/typeIconSource" />
+
+
+    <TextView
+        android:padding="10sp"
+        android:textSize="12dp"
+        android:textColor="#000000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/combinationIconSource" />
+
+    <TextView
+        android:padding="10sp"
+        android:textSize="12dp"
+        android:textColor="#000000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/homeIconSource" />
+
+    <TextView
+        android:padding="10sp"
+        android:textSize="12dp"
+        android:textColor="#000000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/colorIconSource" />
+
+    <TextView
+        android:padding="10sp"
+        android:textSize="12dp"
+        android:textColor="#000000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/settingsIconSource" />
+
+    <TextView
+        android:padding="6sp"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/mainApplication" />
+
+    <TextView
+        android:padding="10sp"
+        android:textSize="12dp"
+        android:textColor="#000000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/mainApplicationSource" />
+
+
+</LinearLayout>

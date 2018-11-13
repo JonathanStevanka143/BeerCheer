@@ -9,12 +9,14 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements
         aboutUsFragment.OnFragmentInteractionListener,
-        BeerType.OnFragmentInteractionListener{
+        BeerType.OnFragmentInteractionListener,
+        SettingsFragment.OnFragmentInteractionListener{
 
     private TextView mTextMessage;
     FragmentManager fm;
@@ -37,8 +39,8 @@ public class MainActivity extends AppCompatActivity implements
                     return true;
                 case R.id.navigation_beerColor:
                     return true;
-                case R.id.navigation_aboutUs:
-                    transaction.replace(R.id.content, new aboutUsFragment());
+                case R.id.navigation_settings:
+                    transaction.replace(R.id.content, new SettingsFragment());
                     transaction.addToBackStack(null);
                     transaction.commit();
                     return true;
@@ -51,13 +53,11 @@ public class MainActivity extends AppCompatActivity implements
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         fm = getSupportFragmentManager();
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-
-
-
     }
 
     @Override
