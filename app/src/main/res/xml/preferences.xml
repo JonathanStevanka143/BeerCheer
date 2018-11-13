@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        android:title="@string/contactTitle">
+
+        <Preference
+            app:key="feedback"
+            android:title="@string/feedbackTitle"
+            app:summary="@string/feedbackSummary"
+            />
+
+        <Preference
+            app:key="call"
+            android:title="@string/supportTitle"
+            app:summary="@string/supportSummary" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/legalTitle">
+
+        <Preference
+            app:key="credits"
+            android:title="@string/credits" />
+
+        <Preference
+            app:key="license"
+            android:title="@string/license_2"
+            />
+
+    </PreferenceCategory>
+</PreferenceScreen>
