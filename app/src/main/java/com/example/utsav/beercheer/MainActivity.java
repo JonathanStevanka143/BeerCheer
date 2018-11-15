@@ -17,7 +17,8 @@ public class MainActivity extends AppCompatActivity implements
         aboutUsFragment.OnFragmentInteractionListener,
         BeerType.OnFragmentInteractionListener,
         SettingsFragment.OnFragmentInteractionListener,
-        homeScreenFragment.OnFragmentInteractionListener{
+        homeScreenFragment.OnFragmentInteractionListener,
+        CombinationFragment.OnFragmentInteractionListener{
 
     private TextView mTextMessage;
     FragmentManager fm;
@@ -30,19 +31,26 @@ public class MainActivity extends AppCompatActivity implements
 
             switch (item.getItemId()) {
                 case R.id.navigation_combination:
+                    transaction.replace(R.id.content,new CombinationFragment());
+                    transaction.addToBackStack(null);
+                    transaction.commit();
                     return true;
+
                 case R.id.navigation_beerType:
                     transaction.replace(R.id.content,new BeerType());
                     transaction.addToBackStack(null);
                     transaction.commit();
                     return true;
+
                 case R.id.navigation_home:
                     transaction.replace(R.id.content, new homeScreenFragment());
                     transaction.addToBackStack(null);
                     transaction.commit();
                     return true;
+
                 case R.id.navigation_beerColor:
                     return true;
+
                 case R.id.navigation_settings:
                     transaction.replace(R.id.content, new SettingsFragment());
                     transaction.addToBackStack(null);
