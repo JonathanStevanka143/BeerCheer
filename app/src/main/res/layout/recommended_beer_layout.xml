@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="432dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@color/ic_launcher_background" />
+
+    <ImageView
+        android:id="@+id/foodImage"
+        android:layout_width="91dp"
+        android:layout_height="89dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars[1]" />
+
+    <TextView
+        android:id="@+id/beerTitleName"
+        android:layout_width="261dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="21sp"
+        app:layout_constraintStart_toEndOf="@+id/foodImage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/beerIBU"
+        android:layout_width="87dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="8dp"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/foodImage"
+        app:layout_constraintTop_toBottomOf="@+id/beerTitleName" />
+
+    <TextView
+        android:id="@+id/beerTypeT"
+        android:layout_width="87dp"
+        android:layout_height="22dp"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/beerIBU"
+        app:layout_constraintTop_toBottomOf="@+id/beerTitleName" />
+
+    <TextView
+        android:id="@+id/beerABV"
+        android:layout_width="87dp"
+        android:layout_height="22dp"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/beerTypeT"
+        app:layout_constraintTop_toBottomOf="@+id/beerTitleName" />
+
+    <TextView
+        android:id="@+id/beerDescription"
+        android:layout_width="260dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="8dp"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/foodImage"
+        app:layout_constraintTop_toBottomOf="@+id/beerIBU" />
+
+</android.support.constraint.ConstraintLayout>

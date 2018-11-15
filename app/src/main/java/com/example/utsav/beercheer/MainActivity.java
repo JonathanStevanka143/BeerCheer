@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity implements
         aboutUsFragment.OnFragmentInteractionListener,
         BeerType.OnFragmentInteractionListener,
         SettingsFragment.OnFragmentInteractionListener,
+        homeScreenFragment.OnFragmentInteractionListener,
         CombinationFragment.OnFragmentInteractionListener{
 
     private TextView mTextMessage;
@@ -42,6 +43,9 @@ public class MainActivity extends AppCompatActivity implements
                     return true;
 
                 case R.id.navigation_home:
+                    transaction.replace(R.id.content, new homeScreenFragment());
+                    transaction.addToBackStack(null);
+                    transaction.commit();
                     return true;
 
                 case R.id.navigation_beerColor:
@@ -66,6 +70,12 @@ public class MainActivity extends AppCompatActivity implements
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+        FragmentManager fm;
+        fm = getSupportFragmentManager();
+        FragmentTransaction transaction = fm.beginTransaction();
+        transaction.replace(R.id.content, new homeScreenFragment());
+        transaction.commit();
     }
 
     @Override
