@@ -14,17 +14,6 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <!--List Preference Items-->
-    <string-array name="listArray">
-        <item>English</item>
-        <item>French</item>
-    </string-array>
-
-    <string-array name="listValues">
-        <item>1</item>
-        <item>2</item>
-    </string-array>
-
     <string name="license">
         BeerCheer 1.0\n
         Copyright &#169; 2018 Utsav Dave, Jonathan Stevanka\n
@@ -116,5 +105,37 @@
     <string name="license_2" translatable="false">License</string>
     <string name="credits" translatable="false">Credits</string>
     <string name="pickTitle">Pick your language</string>
+
+    <!--Beer Combination Screen Strings-->
+    <string name="chicken">Chicken</string>
+    <string name="fish">Fish</string>
+    <string name="cheese">Cheese</string>
+    <string name="chocolate">Chocolates</string>
+    <string name="oyster">Sea Oysters</string>
+    <string name="grilled">Grilled Meat</string>
+    <string name="sandwich">Sandwiches</string>
+    <string name="sushi">Sushi</string>
+    <string name="pie">Dessert</string>
+    <string name="bbq">BBQd Ribs</string>
+    <string name="shellfish">Shellfish</string>
+    <string name="steak">Steak</string>
+    <string name="salad">Salad</string>
+    <string name="mexican">Mexican Food</string>
+    <string name="salmon">Salmon</string>
+    <string name="burger">Burgers</string>
+    <string name="pudding">Puddings</string>
+    <string name="spicy">Spicy Food</string>
+    <string name="curry">Curry</string>
+    <string name="egg">Egg Items</string>
+    <string name="mussel">Mussel Food</string>
+    <string name="pork">Pork</string>
+    <string name="lager">Lager Beer</string>
+    <string name="stout">Stout Beer</string>
+    <string name="pilsner">Pilsner Beer</string>
+    <string name="porter">Porter Beer</string>
+    <string name="sour">Sour Beer</string>
+    <string name="wheat">Wheat Beer</string>
+    <string name="ipa">Indian Pale Ale Beer</string>
+    <string name="pale">Pale Ale Beer</string>
 
 </resources>
