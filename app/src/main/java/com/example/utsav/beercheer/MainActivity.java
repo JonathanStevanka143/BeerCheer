@@ -70,6 +70,12 @@ public class MainActivity extends AppCompatActivity implements
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+        FragmentManager fm;
+        fm = getSupportFragmentManager();
+        FragmentTransaction transaction = fm.beginTransaction();
+        transaction.replace(R.id.content, new homeScreenFragment());
+        transaction.commit();
     }
 
     @Override

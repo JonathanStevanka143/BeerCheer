@@ -5,16 +5,17 @@ public class creatorInsight {
     private int creatorImg;
     private String creatorName;
     private String creatorPick;
-
+    private String creatorDescription;
 
     public creatorInsight() {
 
     }
 
-    public creatorInsight(int creatorImg, String creatorName, String creatorPick) {
+    public creatorInsight(int creatorImg, String creatorName, String creatorPick, String creatorDescription) {
         this.creatorImg = creatorImg;
         this.creatorName = creatorName;
         this.creatorPick = creatorPick;
+        this.creatorDescription = creatorDescription;
     }
 
     public int getCreatorImg() {
@@ -39,5 +40,13 @@ public class creatorInsight {
 
     public void setCreatorPick(String creatorPick) {
         this.creatorPick = creatorPick;
+    }
+
+    public String getCreatorDescription() {
+        return creatorDescription;
+    }
+
+    public void setCreatorDescription(String creatorDescription) {
+        this.creatorDescription = creatorDescription;
     }
 }

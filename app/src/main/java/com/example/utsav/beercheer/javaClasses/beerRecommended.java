@@ -10,6 +10,7 @@ public class beerRecommended {
     private String beerType;
     private String beerABV;
     private String beerDescription;
+
     public beerRecommended() {
 
     }
@@ -20,6 +21,7 @@ public class beerRecommended {
         this.beerIBU = beerIBU;
         this.beerType = beerType;
         this.beerABV = beerABV;
+        this.beerDescription = beerDescription;
     }
 
 

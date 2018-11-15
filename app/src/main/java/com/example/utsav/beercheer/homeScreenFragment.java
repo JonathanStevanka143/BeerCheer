@@ -99,32 +99,39 @@ public class homeScreenFragment extends Fragment {
         //create the arrayList to hold the recommended beer items
         ArrayList<beerRecommended> recommendedBeer = new ArrayList<>();
         //create the items on this beer list items
-        recommendedBeer.add(new beerRecommended(R.drawable.stout,"Stout Beer","IBU: 40","Type: Stout","ABV: 4.2%",""));
-        recommendedBeer.add(new beerRecommended(R.drawable.porter,"Porter","","","",""));
-        recommendedBeer.add(new beerRecommended(R.drawable.paleale,"Pale Ale","","","",""));
+        recommendedBeer.add(new beerRecommended(R.drawable.stout,"Stout Beer","IBU: 40","Type: Stout","ABV: 4.2%","is a traditional stout beer made from roasted barley, hops, yeast, and water."));
+        recommendedBeer.add(new beerRecommended(R.drawable.porter,"Porter","IBU: 35","Type: Porter","3.7%","Porter is a dark style of beer developed in London from well-hopped beers made from brown malt"));
+        recommendedBeer.add(new beerRecommended(R.drawable.paleale,"Pale Ale","IBU: 65","Type: Pale","7.2%","From the beginning to the end you will always taste the fresh pure crispness of this Pale Ale."));
 
 
         //create the arrayList to hold recommendedFoodTypes
         ArrayList<foodRecommended> recommendedFood = new ArrayList<>();
 
         //add the items onto the list
-        recommendedFood.add(new foodRecommended());
-        recommendedFood.add(new foodRecommended());
-        recommendedFood.add(new foodRecommended());
+        recommendedFood.add(new foodRecommended(R.drawable.burger,"Burger & Fries","Beer: Porter","This is always a classic meal to rely upon after a hard days work."));
+        recommendedFood.add(new foodRecommended(R.drawable.chicken,"Chicken roast","Beer: pale ale","After a long hard day at work or school its good to sit down with this pair."));
+        recommendedFood.add(new foodRecommended(R.drawable.steak,"Steak & Dark Ale","Dark Ale","This is a great way to celebrate with you family, well cooked steak and a nice Dark Ale."));
 
 
         //create the arrayList to hold information about the authors of the program
-        ArrayList<creatorInsight> creatorInsights = new ArrayList<>();
+        ArrayList<creatorInsight> creatorInsightsList = new ArrayList<>();
         //create the items for the creatorinsight listview
-        creatorInsights.add(new creatorInsight());
-        creatorInsights.add(new creatorInsight());
+        creatorInsightsList.add(new creatorInsight(R.drawable.me,"Jonathan Stevanka","Recommened pick: Try out the Stout beer with a nice fat juicy burger from your favourite restaurant!!","Description: I am a very open minded person open to new ideas and opportunities."));
+        creatorInsightsList.add(new creatorInsight(R.drawable.dave,"Dave Utsave","N/A","asdasdsadasdsdasdasdasdsdasdsaasdasdsadasdsdasdasdasdsdasdsaasdasdsadasdsdasdasdasdsdasdsaasdasdsadasdsdasdasdasdsdasdsaasdasdsadasdsdasdasdasdsdasdsaasdasdsadasdsdasdasdasdsdasdsaasdasdsadasdsdasdasdasdsdasdsaasdasdsadasdsdasdasdasdsdasdsaasdasdsadasdsdasdasdasdsdasdsaasdasdsadasdsdasdasdasdsdasdsa"));
 
 
 
         //create and connect the custom adapter for the Recommended beer
-        beerAdapter adapter1 = new beerAdapter(getContext(), recommendedBeer);
-        beerList.setAdapter(adapter1);
+        beerAdapter beerAdapter = new beerAdapter(getContext(), recommendedBeer);
+        beerList.setAdapter(beerAdapter);
 
+        //create and connect the custom adapter for the recommended food
+        foodAdapter foodAdapter = new foodAdapter(getContext(), recommendedFood);
+        foodList.setAdapter(foodAdapter);
+
+        //create and connect the custom adapter for the creator insight
+        creatorInsightAdap creatorInsightAdap = new creatorInsightAdap(getContext(), creatorInsightsList);
+        CreatorList.setAdapter(creatorInsightAdap);
 
         return view;
     }
@@ -182,20 +189,62 @@ public class homeScreenFragment extends Fragment {
                 viewConvert = LayoutInflater.from(getContext())
                         .inflate(R.layout.recommended_food_layout, parent, false);
             }
-
+            //grab the current position in the list
             foodRecommended foodRecommended = getItem(position);
+            //map the textview name to the text
+            TextView foodName = viewConvert.findViewById(R.id.foodName);
+            TextView foodCombo = viewConvert.findViewById(R.id.foodBeerCombo);
+            TextView foodDescription = viewConvert.findViewById(R.id.foodDescription);
+            ImageView foodImage = viewConvert.findViewById(R.id.foodImage);
 
+
+            foodName.setText(foodRecommended.getFoodName());
+            foodCombo.setText(foodRecommended.getFoodCombo());
+            foodDescription.setText(foodRecommended.getFoodDescription());
+            foodImage.setImageResource(foodRecommended.getFoodImg());
+
+            return viewConvert;
+        }
+    }
+
+    public class creatorInsightAdap extends ArrayAdapter<creatorInsight>{
+        public creatorInsightAdap(Context context, ArrayList<creatorInsight> items){
+            super(context, 0, items);
+        }
+        @NonNull
+        @Override
+        public View getView(int position, @Nullable View viewConvert, @NonNull ViewGroup parent) {
+            //grab the current position in the list
+
+            if(viewConvert == null){
+                viewConvert = LayoutInflater.from(getContext())
+                        .inflate(R.layout.creator_insight_layout, parent, false);
+            }
+            creatorInsight creatorInsight = getItem(position);
+            //map the textview name to the text
+            TextView creatorName =  viewConvert.findViewById(R.id.creatorNamee);
+            TextView creatorFavourite = viewConvert.findViewById(R.id.creatorsChoice);
+            TextView creatorDesc = viewConvert.findViewById(R.id.creatorDescription);
+            ImageView creatorImg = viewConvert.findViewById(R.id.creatorImg);
+
+            creatorName.setText(creatorInsight.getCreatorName());
+            creatorFavourite.setText(creatorInsight.getCreatorPick());
+            creatorDesc.setText(creatorInsight.getCreatorDescription());
+            creatorImg.setImageResource(creatorInsight.getCreatorImg());
 
 
 
             return viewConvert;
         }
     }
+
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
             mListener.onFragmentInteraction(uri);
         }
+
+
     }
 
     @Override

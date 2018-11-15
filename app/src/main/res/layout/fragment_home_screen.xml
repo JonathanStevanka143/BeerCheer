@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/ic_launcher_background"
+    android:background="@color/colorPrimary"
     tools:context=".homeScreenFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -18,30 +18,63 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway"
+                android:text="Recommended Beer"
+                android:textAlignment="center"
+                android:textColor="@color/ic_launcher_background"
+                android:textSize="26sp" />
+
             <ListView
                 android:id="@+id/recommendedBeerList"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="10dp"
-                android:padding="15dp">
+                android:layout_height="409dp"
+                android:layout_margin="5dp"
+                android:layout_marginTop="0dp"
+                android:paddingTop="20dp"
+                android:scrollbars="none">
 
             </ListView>
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway"
+                android:text="Recommended food and beer"
+                android:textAlignment="center"
+                android:textColor="@color/ic_launcher_background"
+                android:textSize="24sp" />
 
             <ListView
                 android:id="@+id/recommendedFoodList"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="10dp"
-                android:padding="15dp">
+                android:layout_height="372dp"
+                android:layout_margin="5dp"
+                android:scrollbars="none">
 
             </ListView>
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway"
+                android:text="Creator Insight"
+                android:textAlignment="center"
+                android:textColor="@color/ic_launcher_background"
+                android:textSize="24sp" />
 
             <ListView
                 android:id="@+id/creatorInsightList"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="10dp"
-                android:padding="15dp">
+                android:layout_height="416dp"
+                android:layout_margin="5dp"
+                android:layout_marginTop="0dp"
+                android:scrollbars="none">
 
             </ListView>
         </LinearLayout>
