@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimary2"
+    android:layout_height="match_parent"
+    tools:context=".BeerColorFragment">
+
+    <RelativeLayout
+        android:id="@+id/units"
+        android:layout_marginLeft="5sp"
+        android:layout_marginBottom="10sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/unitTextView"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:text="@string/units"
+            android:fontFamily="@font/imprimaa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RadioGroup
+            android:layout_toRightOf="@id/unitTextView"
+            android:id="@+id/unitsGroup"
+            android:layout_marginLeft="70sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:fontFamily="@font/imprimaa"
+                android:layout_width="wrap_content"
+                android:text="@string/us"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:id="@+id/us"/>
+
+            <RadioButton
+                android:id="@+id/metric"
+                android:text="@string/metric"
+                android:textColor="#000000"
+                android:fontFamily="@font/imprimaa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RadioGroup>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/batch"
+        android:layout_marginLeft="5sp"
+        android:layout_below="@id/units"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/batchSize"
+            android:fontFamily="@font/imprimaa"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:text="@string/batchSize"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/batchSizeEdit"
+            android:inputType="number"
+            android:layout_marginLeft="30sp"
+            android:layout_toRightOf="@id/batchSize"
+            android:layout_width="100sp"
+            android:layout_height="40sp" />
+
+        <TextView
+            android:layout_toRightOf="@id/batchSizeEdit"
+            android:id="@+id/batchTextView"
+            android:textColor="#000000"
+            android:fontFamily="@font/imprimaa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/kgGrain"
+        android:layout_below="@id/batch"
+        android:layout_marginTop="5sp"
+        android:background="#E7C692"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginLeft="5sp"
+            android:id="@+id/kg"
+            android:textStyle="bold"
+            android:fontFamily="@font/imprimaa"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:padding="5sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""/>
+
+        <TextView
+            android:layout_marginLeft="220sp"
+            android:layout_toRightOf="@id/kg"
+            android:padding="5sp"
+            android:id="@+id/grain"
+            android:textStyle="bold"
+            android:fontFamily="@font/imprimaa"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/grain"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/inputValues"
+        android:layout_marginTop="8sp"
+        android:layout_below="@id/kgGrain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/typeValue"
+            android:layout_marginLeft="30sp"
+            android:layout_marginBottom="7sp"
+            android:inputType="number"
+            android:layout_width="100sp"
+            android:layout_height="40sp" />
+
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="174dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="75sp"
+            android:layout_marginRight="5sp"
+            android:layout_marginBottom="7sp"
+            android:layout_toRightOf="@id/typeValue"
+            android:background="@drawable/spinner_background"/>
+
+        <EditText
+            android:id="@+id/typeValue2"
+            android:layout_marginLeft="30sp"
+            android:layout_below="@id/typeValue"
+            android:layout_marginBottom="7sp"
+            android:inputType="number"
+            android:layout_width="100sp"
+            android:layout_height="40sp" />
+
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_width="177dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/typeValue"
+            android:layout_marginLeft="72dp"
+            android:layout_marginBottom="7sp"
+            android:layout_marginRight="5sp"
+            android:layout_toRightOf="@id/typeValue2"
+            android:background="@drawable/spinner_background"
+            android:spinnerMode="dropdown" />
+
+        <EditText
+            android:id="@+id/typeValue3"
+            android:layout_marginBottom="7sp"
+            android:layout_marginLeft="30sp"
+            android:layout_below="@id/typeValue2"
+            android:inputType="number"
+            android:layout_width="100sp"
+            android:layout_height="40sp" />
+
+        <Spinner
+            android:id="@+id/spinner3"
+            android:layout_width="177dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/typeValue2"
+            android:layout_marginTop="7sp"
+            android:layout_marginLeft="72dp"
+            android:layout_marginRight="5sp"
+            android:layout_toRightOf="@id/typeValue3"
+            android:background="@drawable/spinner_background"
+            android:spinnerMode="dropdown" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/buttons"
+        android:layout_below="@id/inputValues"
+        android:layout_marginTop="20sp"
+        android:layout_marginBottom="30sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:fontFamily="@font/imprimaa"
+            android:id="@+id/updateButton"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="5sp"
+            android:textColor="#000000"
+            android:layout_height="wrap_content"
+            android:text="@string/update"/>
+
+        <Button
+            android:fontFamily="@font/imprimaa"
+            android:layout_marginLeft="140sp"
+            android:layout_toRightOf="@id/updateButton"
+            android:id="@+id/resetButton"
+            android:layout_width="wrap_content"
+            android:textColor="#000000"
+            android:layout_height="wrap_content"
+            android:text="@string/reset"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/results"
+        android:layout_marginLeft="5sp"
+        android:layout_below="@id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/textViews"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/src"
+                android:textSize="25sp"
+                android:textColor="#000000"
+                android:fontFamily="@font/imprimaa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/src"/>
+
+            <TextView
+                android:layout_below="@id/src"
+                android:textSize="25sp"
+                android:textColor="#000000"
+                android:fontFamily="@font/imprimaa"
+                android:id="@+id/ebc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ebc"/>
+
+            <TextView
+                android:layout_below="@id/ebc"
+                android:id="@+id/approxColor"
+                android:textSize="25sp"
+                android:textColor="#000000"
+                android:fontFamily="@font/imprimaa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/approx"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/resultViews"
+            android:layout_marginLeft="80sp"
+            android:layout_toRightOf="@id/textViews"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/srcResult"
+                android:textSize="25sp"
+                android:textColor="#000000"
+                android:fontFamily="@font/imprimaa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.0"/>
+
+            <TextView
+                android:layout_below="@id/src"
+                android:textSize="25sp"
+                android:textColor="#000000"
+                android:fontFamily="@font/imprimaa"
+                android:id="@+id/ebcResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.0"/>
+
+            <TextView
+                android:layout_below="@id/ebc"
+                android:textSize="25sp"
+                android:textColor="#000000"
+                android:fontFamily="@font/imprimaa"
+                android:id="@+id/approxColorResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#f5974a"
+                android:text="            "/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
