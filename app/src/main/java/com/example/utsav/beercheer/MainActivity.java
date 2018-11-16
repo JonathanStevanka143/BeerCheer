@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity implements
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             FragmentTransaction transaction = fm.beginTransaction();
-
             switch (item.getItemId()) {
                 case R.id.navigation_combination:
                     transaction.replace(R.id.content,new CombinationFragment());
@@ -70,6 +69,7 @@ public class MainActivity extends AppCompatActivity implements
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        navigation.setSelectedItemId(R.id.navigation_home);
 
         FragmentManager fm;
         fm = getSupportFragmentManager();
