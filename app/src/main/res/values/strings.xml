@@ -138,4 +138,17 @@
     <string name="ipa">Indian Pale Ale Beer</string>
     <string name="pale">Pale Ale Beer</string>
 
+    <!--Beer Color Calculator Screen Strings-->
+    <string name="units">Units:</string>
+    <string name="us">US- Gallon/Pounds</string>
+    <string name="metric">Metric - Liters/Kg</string>
+    <string name="batchSize">Batch Size:</string>
+    <string name="grain">Grain</string>
+    <string name="update">UPDATE</string>
+    <string name="reset">RESET</string>
+    <string name="src">SRC:</string>
+    <string name="ebc">EBC:</string>
+    <string name="approx">Approx Color:</string>
+
+
 </resources>
