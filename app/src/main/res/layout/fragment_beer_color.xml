@@ -1,309 +1,322 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/colorPrimary2"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary2"
     tools:context=".BeerColorFragment">
 
-    <RelativeLayout
-        android:id="@+id/units"
-        android:layout_marginLeft="5sp"
-        android:layout_marginBottom="10sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:id="@+id/unitTextView"
-            android:textColor="#000000"
-            android:textStyle="bold"
-            android:textSize="20sp"
-            android:text="@string/units"
-            android:fontFamily="@font/imprimaa"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <RadioGroup
-            android:layout_toRightOf="@id/unitTextView"
-            android:id="@+id/unitsGroup"
-            android:layout_marginLeft="70sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <RadioButton
-                android:fontFamily="@font/imprimaa"
-                android:layout_width="wrap_content"
-                android:text="@string/us"
-                android:layout_height="wrap_content"
-                android:textColor="#000000"
-                android:id="@+id/us"/>
-
-            <RadioButton
-                android:id="@+id/metric"
-                android:text="@string/metric"
-                android:textColor="#000000"
-                android:fontFamily="@font/imprimaa"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-        </RadioGroup>
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/batch"
-        android:layout_marginLeft="5sp"
-        android:layout_below="@id/units"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:id="@+id/batchSize"
-            android:fontFamily="@font/imprimaa"
-            android:textColor="#000000"
-            android:textStyle="bold"
-            android:text="@string/batchSize"
-            android:textSize="20sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <EditText
-            android:id="@+id/batchSizeEdit"
-            android:inputType="number"
-            android:layout_marginLeft="30sp"
-            android:layout_toRightOf="@id/batchSize"
-            android:layout_width="100sp"
-            android:layout_height="40sp" />
-
-        <TextView
-            android:layout_toRightOf="@id/batchSizeEdit"
-            android:id="@+id/batchTextView"
-            android:textColor="#000000"
-            android:fontFamily="@font/imprimaa"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""/>
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/kgGrain"
-        android:layout_below="@id/batch"
-        android:layout_marginTop="5sp"
-        android:background="#E7C692"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:scrollbars="none">
 
-        <TextView
-            android:layout_marginLeft="5sp"
-            android:id="@+id/kg"
-            android:textStyle="bold"
-            android:fontFamily="@font/imprimaa"
-            android:textColor="#000000"
-            android:textSize="18sp"
-            android:padding="5sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""/>
-
-        <TextView
-            android:layout_marginLeft="220sp"
-            android:layout_toRightOf="@id/kg"
-            android:padding="5sp"
-            android:id="@+id/grain"
-            android:textStyle="bold"
-            android:fontFamily="@font/imprimaa"
-            android:textColor="#000000"
-            android:textSize="18sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/grain"/>
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/inputValues"
-        android:layout_marginTop="8sp"
-        android:layout_below="@id/kgGrain"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <EditText
-            android:id="@+id/typeValue"
-            android:layout_marginLeft="30sp"
-            android:layout_marginBottom="7sp"
-            android:inputType="number"
-            android:layout_width="100sp"
-            android:layout_height="40sp" />
-
-        <Spinner
-            android:id="@+id/spinner1"
-            android:layout_width="174dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="75sp"
-            android:layout_marginRight="5sp"
-            android:layout_marginBottom="7sp"
-            android:layout_toRightOf="@id/typeValue"
-            android:background="@drawable/spinner_background"/>
-
-        <EditText
-            android:id="@+id/typeValue2"
-            android:layout_marginLeft="30sp"
-            android:layout_below="@id/typeValue"
-            android:layout_marginBottom="7sp"
-            android:inputType="number"
-            android:layout_width="100sp"
-            android:layout_height="40sp" />
-
-        <Spinner
-            android:id="@+id/spinner2"
-            android:layout_width="177dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/typeValue"
-            android:layout_marginLeft="72dp"
-            android:layout_marginBottom="7sp"
-            android:layout_marginRight="5sp"
-            android:layout_toRightOf="@id/typeValue2"
-            android:background="@drawable/spinner_background"
-            android:spinnerMode="dropdown" />
-
-        <EditText
-            android:id="@+id/typeValue3"
-            android:layout_marginBottom="7sp"
-            android:layout_marginLeft="30sp"
-            android:layout_below="@id/typeValue2"
-            android:inputType="number"
-            android:layout_width="100sp"
-            android:layout_height="40sp" />
-
-        <Spinner
-            android:id="@+id/spinner3"
-            android:layout_width="177dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/typeValue2"
-            android:layout_marginTop="7sp"
-            android:layout_marginLeft="72dp"
-            android:layout_marginRight="5sp"
-            android:layout_toRightOf="@id/typeValue3"
-            android:background="@drawable/spinner_background"
-            android:spinnerMode="dropdown" />
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/buttons"
-        android:layout_below="@id/inputValues"
-        android:layout_marginTop="20sp"
-        android:layout_marginBottom="30sp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <Button
-            android:fontFamily="@font/imprimaa"
-            android:id="@+id/updateButton"
-            android:layout_width="wrap_content"
-            android:layout_marginLeft="5sp"
-            android:textColor="#000000"
-            android:layout_height="wrap_content"
-            android:text="@string/update"/>
-
-        <Button
-            android:fontFamily="@font/imprimaa"
-            android:layout_marginLeft="140sp"
-            android:layout_toRightOf="@id/updateButton"
-            android:id="@+id/resetButton"
-            android:layout_width="wrap_content"
-            android:textColor="#000000"
-            android:layout_height="wrap_content"
-            android:text="@string/reset"/>
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/results"
-        android:layout_marginLeft="5sp"
-        android:layout_below="@id/buttons"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <LinearLayout
-            android:id="@+id/textViews"
-            android:layout_width="wrap_content"
-            android:orientation="vertical"
-            android:layout_height="wrap_content">
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/src"
-                android:textSize="25sp"
-                android:textColor="#000000"
-                android:fontFamily="@font/imprimaa"
+                android:id="@+id/textView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/src"/>
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="52dp"
+                android:fontFamily="@font/imprimaa"
+                android:text="Batch Size:"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
 
             <TextView
-                android:layout_below="@id/src"
-                android:textSize="25sp"
-                android:textColor="#000000"
-                android:fontFamily="@font/imprimaa"
-                android:id="@+id/ebc"
+                android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/ebc"/>
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/imprimaa"
+                android:text="Units:"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RadioButton
+                    android:id="@+id/us"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/imprimaa"
+                    android:text="US - Gallons/Pounds"
+                    android:textColor="#000000" />
+
+                <RadioButton
+                    android:id="@+id/metric"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/imprimaa"
+                    android:text="Metric - Liters/Kg"
+                    android:textColor="#000000" />
+
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="146dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:inputType="number"
+                app:layout_constraintStart_toEndOf="@+id/textView6"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
             <TextView
-                android:layout_below="@id/ebc"
-                android:id="@+id/approxColor"
-                android:textSize="25sp"
-                android:textColor="#000000"
-                android:fontFamily="@font/imprimaa"
+                android:id="@+id/textView7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/approx"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/resultViews"
-            android:layout_marginLeft="80sp"
-            android:layout_toRightOf="@id/textViews"
-            android:layout_width="wrap_content"
-            android:orientation="vertical"
-            android:layout_height="wrap_content">
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/imprimaa"
+                android:text="kg/pounds"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/editText"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
             <TextView
-                android:id="@+id/srcResult"
-                android:textSize="25sp"
-                android:textColor="#000000"
-                android:fontFamily="@font/imprimaa"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0.0"/>
+                android:id="@+id/textView8"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:background="#E7C692"
+                android:text=""
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText" />
 
             <TextView
-                android:layout_below="@id/src"
-                android:textSize="25sp"
-                android:textColor="#000000"
-                android:fontFamily="@font/imprimaa"
-                android:id="@+id/ebcResult"
+                android:id="@+id/textView9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0.0"/>
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/imprimaa"
+                android:text="kg/pounds"
+                android:textColor="#000000"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/textView8"
+                app:layout_constraintTop_toTopOf="@+id/textView8" />
 
             <TextView
-                android:layout_below="@id/ebc"
-                android:textSize="25sp"
-                android:textColor="#000000"
-                android:fontFamily="@font/imprimaa"
-                android:id="@+id/approxColorResult"
+                android:id="@+id/textView10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/imprimaa"
+                android:text="Grain"
+                android:textColor="#000000"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/textView8"
+                app:layout_constraintTop_toTopOf="@+id/textView8" />
+
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="156dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:inputType="number"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+            <EditText
+                android:id="@+id/editText3"
+                android:layout_width="156dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:inputType="number"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText2" />
+
+            <EditText
+                android:id="@+id/editText4"
+                android:layout_width="156dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:inputType="number"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText3" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="154dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+            <Spinner
+                android:id="@+id/spinner4"
+                android:layout_width="154dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+            <Spinner
+                android:id="@+id/spinner5"
+                android:layout_width="154dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinner4" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/imprimaa"
+                android:text="Update"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toStartOf="@+id/button2"
+                app:layout_constraintHorizontal_bias="0.306"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText4" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="44dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/imprimaa"
+                android:text="Reset"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText4" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/imprimaa"
+                android:text="SRC:"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toStartOf="@+id/textView14"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/imprimaa"
+                android:text="EBC:"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toStartOf="@+id/textView15"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/imprimaa"
+                android:text="Approx Color:"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toStartOf="@+id/textView16"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="80dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/imprimaa"
+                android:text="TextView"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="80dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/imprimaa"
+                android:text="TextView"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="93dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="80dp"
+                android:layout_marginTop="8dp"
                 android:background="#f5974a"
-                android:text="            "/>
+                android:text="TextView"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
-        </LinearLayout>
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
 
-    </RelativeLayout>
-
-</RelativeLayout>
+</FrameLayout>
