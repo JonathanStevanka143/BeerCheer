@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity implements
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             FragmentTransaction transaction = fm.beginTransaction();
-
             switch (item.getItemId()) {
                 case R.id.navigation_combination:
                     transaction.replace(R.id.content,new CombinationFragment());
