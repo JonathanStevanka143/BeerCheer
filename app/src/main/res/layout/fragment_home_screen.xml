@@ -31,7 +31,7 @@
             <ListView
                 android:id="@+id/recommendedBeerList"
                 android:layout_width="match_parent"
-                android:layout_height="409dp"
+                android:layout_height="700dp"
                 android:layout_margin="5dp"
                 android:layout_marginTop="0dp"
                 android:paddingTop="20dp"
@@ -44,7 +44,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/raleway"
-                android:text="Recommended food and beer"
+                android:text="Recommended Food and Beer"
                 android:textAlignment="center"
                 android:textColor="@color/ic_launcher_background"
                 android:textSize="24sp" />
@@ -52,7 +52,7 @@
             <ListView
                 android:id="@+id/recommendedFoodList"
                 android:layout_width="match_parent"
-                android:layout_height="372dp"
+                android:layout_height="818dp"
                 android:layout_margin="5dp"
                 android:scrollbars="none">
 
@@ -71,7 +71,7 @@
             <ListView
                 android:id="@+id/creatorInsightList"
                 android:layout_width="match_parent"
-                android:layout_height="416dp"
+                android:layout_height="632dp"
                 android:layout_margin="5dp"
                 android:layout_marginTop="0dp"
                 android:scrollbars="none">
