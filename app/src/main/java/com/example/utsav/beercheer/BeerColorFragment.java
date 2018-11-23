@@ -262,14 +262,22 @@ public class BeerColorFragment extends Fragment {
 
         updateButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
+                if(inputValue.getText().toString().trim().length() != 0)
+                {
+                    weight = Double.parseDouble(inputValue.getText().toString());
+                }
 
-                weight = Double.parseDouble(inputValue.getText().toString());
+                if(inputValue2.getText().toString().trim().length() != 0)
+                {
+                    weight2 = Double.parseDouble(inputValue2.getText().toString());
+                }
 
-
-
-                weight2 = Double.parseDouble(inputValue2.getText().toString());
-                weight3 = Double.parseDouble(inputValue3.getText().toString());
+                if(inputValue3.getText().toString().trim().length() != 0)
+                {
+                    weight3 = Double.parseDouble(inputValue3.getText().toString());
+                }
 
                 volume = Double.parseDouble(batchSize.getText().toString());
 
