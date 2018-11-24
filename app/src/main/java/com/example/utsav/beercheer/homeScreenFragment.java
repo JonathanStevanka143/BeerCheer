@@ -108,9 +108,9 @@ public class homeScreenFragment extends Fragment {
         ArrayList<foodRecommended> recommendedFood = new ArrayList<>();
 
         //add the items onto the list
-        recommendedFood.add(new foodRecommended(R.drawable.stout,R.drawable.porter,R.drawable.lager,"Burger & Fries","Beer: Stout, Lager, Porter ","This is always a classic meal to rely upon after a hard days work."));
-        recommendedFood.add(new foodRecommended(R.drawable.pilsner,R.drawable.porter,R.drawable.ipa,"Chicken roast","Beer: Pilsner, Porter, IPA","After a long hard day at work or school its good to sit down with this pair."));
-        recommendedFood.add(new foodRecommended(R.drawable.porter,R.drawable.stout,R.drawable.lager,"Juicy Steak","Beer: Dark Ale, Stout, Lager","This is a great way to celebrate with you family, well cooked steak and a nice Dark Ale."));
+        recommendedFood.add(new foodRecommended(R.drawable.stout,"Burger & Fries","Beer: Stout, Lager, Porter ","This is always a classic meal to rely upon after a hard days work."));
+        recommendedFood.add(new foodRecommended(R.drawable.pilsner,"Chicken roast","Beer: Pilsner, Porter, IPA","After a long hard day at work or school its good to sit down with this pair."));
+        recommendedFood.add(new foodRecommended(R.drawable.porter,"Juicy Steak","Beer: Dark Ale, Stout, Lager","This is a great way to celebrate with you family, well cooked steak and a nice Dark Ale."));
 
 
         //create the arrayList to hold information about the authors of the program
@@ -196,16 +196,12 @@ public class homeScreenFragment extends Fragment {
             TextView foodCombo = viewConvert.findViewById(R.id.foodBeerCombo);
             TextView foodDescription = viewConvert.findViewById(R.id.foodDescription);
             ImageView beerImg = viewConvert.findViewById(R.id.beerImage1);
-            ImageView beerImg2 = viewConvert.findViewById(R.id.beerImage2);
-            ImageView beerImg3 = viewConvert.findViewById(R.id.beerImage3);
 
 
             foodName.setText(foodRecommended.getFoodName());
             foodCombo.setText(foodRecommended.getFoodCombo());
             foodDescription.setText(foodRecommended.getFoodDescription());
             beerImg.setImageResource(foodRecommended.getBeerimg());
-            beerImg2.setImageResource(foodRecommended.getBeerimg2());
-            beerImg3.setImageResource(foodRecommended.getBeerimg3());
 
             return viewConvert;
         }

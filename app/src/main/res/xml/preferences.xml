@@ -16,6 +16,7 @@
             app:key="call"
             android:title="@string/supportTitle"
             app:summary="@string/supportSummary" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
