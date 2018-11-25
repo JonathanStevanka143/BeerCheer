@@ -16,6 +16,16 @@
             app:key="call"
             android:title="@string/supportTitle"
             app:summary="@string/supportSummary" />
+
+        <Preference
+            app:key="location"
+            android:title="@string/locationTitle"
+            app:summary="@string/locationSummary" />
+
+        <Preference
+            app:key="aboutUs"
+            android:title="@string/aboutUsTitle"
+            app:summary="@string/aboutUsSummary" />
     </PreferenceCategory>
 
     <PreferenceCategory

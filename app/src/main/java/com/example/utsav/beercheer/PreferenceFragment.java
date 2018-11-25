@@ -29,7 +29,26 @@ public class PreferenceFragment extends PreferenceFragmentCompat
         Preference callPreference = findPreference("call");
         Preference licensePreference = findPreference("license");
         Preference creditsPreference = findPreference("credits");
+        Preference locationPreference = findPreference("location");
 
+        locationPreference.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+                Uri location = Uri.parse("geo:0,0?q=42.248204,-83.019325(St clair college");
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(location);
+
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null)
+                {
+                    startActivity(intent);
+                    return  true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        });
 
         feedbackPreference.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override
