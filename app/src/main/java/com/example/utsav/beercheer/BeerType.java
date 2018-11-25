@@ -9,8 +9,10 @@ import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 
+import com.example.utsav.beercheer.javaClasses.bottomSheetControl;
 import com.gigamole.infinitecycleviewpager.HorizontalInfiniteCycleViewPager;
 
 import java.util.ArrayList;
@@ -75,6 +77,8 @@ public class BeerType extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_beer_type, container, false);
 
+
+
         initData();
 
         HorizontalInfiniteCycleViewPager viewPager = view.findViewById(R.id.viewPager);
@@ -82,6 +86,8 @@ public class BeerType extends Fragment {
         CustomAdapter adapter = new CustomAdapter(beerImages,getContext());
 
         viewPager.setAdapter(adapter);
+
+
 
         // Inflate the layout for this fragment
         return view;
@@ -139,6 +145,17 @@ public class BeerType extends Fragment {
             beerImage.setImageResource(beerImages.get(position));
 
             container.addView(view);
+
+            //create the information to point towards the button with moreinfo
+            Button bottomSheetInfoButton = view.findViewById(R.id.beerSheetInfo);
+            bottomSheetInfoButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    bottomSheetControl bottomSheetControl = new bottomSheetControl();
+                    bottomSheetControl.show(getChildFragmentManager(),"bottomSheetControl");
+                }
+            });
+
 
             return view;
         }
