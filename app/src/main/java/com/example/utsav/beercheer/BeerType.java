@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.utsav.beercheer.javaClasses.bottomSheetControl;
 import com.gigamole.infinitecycleviewpager.HorizontalInfiniteCycleViewPager;
@@ -137,30 +138,32 @@ public class BeerType extends Fragment {
 
         @NonNull
         @Override
-        public Object instantiateItem(@NonNull ViewGroup container, int position) {
+        public Object instantiateItem(@NonNull ViewGroup container, final int position) {
             View view = layoutInflater.inflate(R.layout.each_beer,container,false);
+
 
             ImageView beerImage = (ImageView) view.findViewById(R.id.eachBeerImage);
 
             beerImage.setImageResource(beerImages.get(position));
 
+
             container.addView(view);
 
             //create the information to point towards the button with moreinfo
-            Button bottomSheetInfoButton = view.findViewById(R.id.beerSheetInfo);
+            //this is our custom bottomSheetControl
+            final Button bottomSheetInfoButton = view.findViewById(R.id.beerSheetInfo);
+
             bottomSheetInfoButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    bottomSheetControl bottomSheetControl = new bottomSheetControl();
+                    final bottomSheetControl bottomSheetControl = new bottomSheetControl();
                     bottomSheetControl.show(getChildFragmentManager(),"bottomSheetControl");
                 }
             });
 
-
             return view;
         }
     }
-
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
