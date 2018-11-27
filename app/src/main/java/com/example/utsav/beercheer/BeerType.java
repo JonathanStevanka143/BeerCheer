@@ -39,7 +39,7 @@ public class BeerType extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
+    final bottomSheetControl bottomSheetControl = new bottomSheetControl();
     private OnFragmentInteractionListener mListener;
 
     public BeerType() {
@@ -142,7 +142,7 @@ public class BeerType extends Fragment {
             View view = layoutInflater.inflate(R.layout.each_beer,container,false);
 
 
-            ImageView beerImage = (ImageView) view.findViewById(R.id.eachBeerImage);
+            final ImageView beerImage = (ImageView) view.findViewById(R.id.eachBeerImage);
 
             beerImage.setImageResource(beerImages.get(position));
 
@@ -156,10 +156,13 @@ public class BeerType extends Fragment {
             bottomSheetInfoButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    final bottomSheetControl bottomSheetControl = new bottomSheetControl();
                     bottomSheetControl.show(getChildFragmentManager(),"bottomSheetControl");
+//                    bottomSheetControl.setBeerBottomDesc("test");
+//                    bottomSheetControl.setBeerBottomTitle("tester123");
                 }
             });
+
+
 
             return view;
         }
