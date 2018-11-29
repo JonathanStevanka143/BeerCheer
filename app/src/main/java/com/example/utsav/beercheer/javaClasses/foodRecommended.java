@@ -3,21 +3,17 @@ package com.example.utsav.beercheer.javaClasses;
 public class foodRecommended {
 
     int beerimg;
-    int beerimg2;
-    int beerimg3;
     private String foodName;
-    private String foodCombo;
     private String foodDescription;
 
     public foodRecommended() {
 
     }
 
-    public foodRecommended(int beerimg,String foodName, String foodCombo, String foodDescription) {
+    public foodRecommended(int beerimg,String foodName, String foodDescription) {
         this.beerimg = beerimg;
 
         this.foodName = foodName;
-        this.foodCombo = foodCombo;
         this.foodDescription = foodDescription;
     }
 
@@ -31,14 +27,6 @@ public class foodRecommended {
 
     public void setFoodName(String foodName) {
         this.foodName = foodName;
-    }
-
-    public String getFoodCombo() {
-        return foodCombo;
-    }
-
-    public void setFoodCombo(String foodCombo) {
-        this.foodCombo = foodCombo;
     }
 
     public String getFoodDescription() {
