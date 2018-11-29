@@ -9,8 +9,11 @@ import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
+import com.example.utsav.beercheer.javaClasses.bottomSheetControl;
 import com.gigamole.infinitecycleviewpager.HorizontalInfiniteCycleViewPager;
 
 import java.util.ArrayList;
@@ -36,7 +39,7 @@ public class BeerType extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
+    final bottomSheetControl bottomSheetControl = new bottomSheetControl();
     private OnFragmentInteractionListener mListener;
 
     public BeerType() {
@@ -75,6 +78,8 @@ public class BeerType extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_beer_type, container, false);
 
+
+
         initData();
 
         HorizontalInfiniteCycleViewPager viewPager = view.findViewById(R.id.viewPager);
@@ -82,6 +87,8 @@ public class BeerType extends Fragment {
         CustomAdapter adapter = new CustomAdapter(beerImages,getContext());
 
         viewPager.setAdapter(adapter);
+
+
 
         // Inflate the layout for this fragment
         return view;
@@ -131,19 +138,35 @@ public class BeerType extends Fragment {
 
         @NonNull
         @Override
-        public Object instantiateItem(@NonNull ViewGroup container, int position) {
+        public Object instantiateItem(@NonNull ViewGroup container, final int position) {
             View view = layoutInflater.inflate(R.layout.each_beer,container,false);
 
-            ImageView beerImage = (ImageView) view.findViewById(R.id.eachBeerImage);
+
+            final ImageView beerImage = (ImageView) view.findViewById(R.id.eachBeerImage);
 
             beerImage.setImageResource(beerImages.get(position));
 
+
             container.addView(view);
+
+            //create the information to point towards the button with moreinfo
+            //this is our custom bottomSheetControl
+            final Button bottomSheetInfoButton = view.findViewById(R.id.beerSheetInfo);
+
+            bottomSheetInfoButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    bottomSheetControl.show(getChildFragmentManager(),"bottomSheetControl");
+//                    bottomSheetControl.setBeerBottomDesc("test");
+//                    bottomSheetControl.setBeerBottomTitle("tester123");
+                }
+            });
+
+
 
             return view;
         }
     }
-
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {

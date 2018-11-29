@@ -5,7 +5,10 @@
     <string name="title_notifications">Notifications</string>
     <string name="locationTitle">Come Visit Us</string>
     <string name="locationSummary">Come see us in person to see more of our combinations</string>
-    <!--Navigation Bar Items-->
+
+    <string name="aboutUsTitle">Learn Our Story</string>
+    <string name="aboutUsSummary">Emplore onto how we got to where we are today</string>
+
     <string name="beerType">Beer Types</string>
     <string name="beerColor">Beer Color</string>
     <string name="combination">Combination</string>
