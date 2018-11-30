@@ -29,6 +29,7 @@ public class PreferenceFragment extends PreferenceFragmentCompat
         Preference callPreference = findPreference("call");
         Preference licensePreference = findPreference("license");
         Preference creditsPreference = findPreference("credits");
+
         Preference locationPreference = findPreference("location");
 
         locationPreference.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {

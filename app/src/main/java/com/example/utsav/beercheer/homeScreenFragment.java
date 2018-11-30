@@ -99,18 +99,18 @@ public class homeScreenFragment extends Fragment {
         //create the arrayList to hold the recommended beer items
         ArrayList<beerRecommended> recommendedBeer = new ArrayList<>();
         //create the items on this beer list items
-        recommendedBeer.add(new beerRecommended(R.drawable.stout,"Stout Beer","IBU: 40","Type: Stout","ABV: 4.2%","is a traditional stout beer made from roasted barley, hops, yeast, and water."));
-        recommendedBeer.add(new beerRecommended(R.drawable.porter,"Porter","IBU: 35","Type: Porter","ABV: 3.7%","Porter is a dark style of beer developed in London from well-hopped beers made from brown malt"));
-        recommendedBeer.add(new beerRecommended(R.drawable.paleale,"Pale Ale","IBU: 65","Type: Pale","ABV: 7.2%","From the beginning to the end you will always taste the fresh pure crispness of this Pale Ale."));
+        recommendedBeer.add(new beerRecommended("Stout Beer","40","4.2%","is a traditional stout beer made from roasted barley, hops, yeast, and water."));
+        recommendedBeer.add(new beerRecommended("Porter","35","3.7%","Porter is a dark style of beer developed in London from well-hopped beers made from brown malt"));
+        recommendedBeer.add(new beerRecommended("Pale Ale","65","7.2%","From the beginning to the end you will always taste the fresh pure crispness of this Pale Ale."));
 
 
         //create the arrayList to hold recommendedFoodTypes
         ArrayList<foodRecommended> recommendedFood = new ArrayList<>();
 
         //add the items onto the list
-        recommendedFood.add(new foodRecommended(R.drawable.stout,R.drawable.porter,R.drawable.lager,"Burger & Fries","Beer: Stout, Lager, Porter ","This is always a classic meal to rely upon after a hard days work."));
-        recommendedFood.add(new foodRecommended(R.drawable.pilsner,R.drawable.porter,R.drawable.ipa,"Chicken roast","Beer: Pilsner, Porter, IPA","After a long hard day at work or school its good to sit down with this pair."));
-        recommendedFood.add(new foodRecommended(R.drawable.porter,R.drawable.stout,R.drawable.lager,"Juicy Steak","Beer: Dark Ale, Stout, Lager","This is a great way to celebrate with you family, well cooked steak and a nice Dark Ale."));
+        recommendedFood.add(new foodRecommended(R.drawable.stout,"Burger & Fries","This is always a classic meal to rely upon after a hard days work."));
+        recommendedFood.add(new foodRecommended(R.drawable.pilsner,"Chicken roast","After a long hard day at work or school its good to sit down with this pair."));
+        recommendedFood.add(new foodRecommended(R.drawable.porter,"Juicy Steak","This is a great way to celebrate with you family, well cooked steak and a nice Dark Ale."));
 
 
         //create the arrayList to hold information about the authors of the program
@@ -157,7 +157,6 @@ public class homeScreenFragment extends Fragment {
             //map the textview name to the text
             TextView beerName = viewConvert.findViewById(R.id.beerTitleName);
             TextView beerIBU = viewConvert.findViewById(R.id.beerIBU);
-            TextView beerType = viewConvert.findViewById(R.id.beerTypeT);
             TextView beerABV = viewConvert.findViewById(R.id.beerABV);
             TextView beerDescription = viewConvert.findViewById(R.id.beerDescription);
             ImageView beerImage = viewConvert.findViewById(R.id.beerImage1);
@@ -165,10 +164,8 @@ public class homeScreenFragment extends Fragment {
 
             beerName.setText(beerRecommended.getBeerName());
             beerIBU.setText(beerRecommended.getBeerIBU());
-            beerType.setText(beerRecommended.getBeerType());
             beerABV.setText(beerRecommended.getBeerABV());
             beerDescription.setText(beerRecommended.getBeerDescription());
-            beerImage.setImageResource(beerRecommended.getBeerImg());
 
 
 
@@ -193,19 +190,13 @@ public class homeScreenFragment extends Fragment {
             foodRecommended foodRecommended = getItem(position);
             //map the textview name to the text
             TextView foodName = viewConvert.findViewById(R.id.foodName);
-            TextView foodCombo = viewConvert.findViewById(R.id.foodBeerCombo);
             TextView foodDescription = viewConvert.findViewById(R.id.foodDescription);
             ImageView beerImg = viewConvert.findViewById(R.id.beerImage1);
-            ImageView beerImg2 = viewConvert.findViewById(R.id.beerImage2);
-            ImageView beerImg3 = viewConvert.findViewById(R.id.beerImage3);
 
 
             foodName.setText(foodRecommended.getFoodName());
-            foodCombo.setText(foodRecommended.getFoodCombo());
             foodDescription.setText(foodRecommended.getFoodDescription());
             beerImg.setImageResource(foodRecommended.getBeerimg());
-            beerImg2.setImageResource(foodRecommended.getBeerimg2());
-            beerImg3.setImageResource(foodRecommended.getBeerimg3());
 
             return viewConvert;
         }
