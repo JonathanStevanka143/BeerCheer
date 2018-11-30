@@ -9,81 +9,126 @@
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="0dp"
-        android:layout_height="178dp"
-        android:layout_marginStart="15dp"
+        android:layout_height="307dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="15dp"
+        android:layout_marginEnd="20dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/bottom_sheet_layout" />
 
     <ImageView
-        android:id="@+id/beerImage1"
-        android:layout_width="93dp"
-        android:layout_height="164dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="16dp"
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="@+id/imageView2"
-        tools:srcCompat="@tools:sample/avatars[1]" />
+        app:layout_constraintTop_toBottomOf="@+id/beerDescription"
+        app:srcCompat="@drawable/circle_round" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/beerIBU"
+        app:layout_constraintTop_toBottomOf="@+id/beerDescription"
+        app:srcCompat="@drawable/circle_round" />
 
     <TextView
         android:id="@+id/beerTitleName"
-        android:layout_width="156dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="0dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/imprima"
         android:textAlignment="center"
         android:textColor="#000000"
-        android:textSize="21sp"
+        android:textSize="35sp"
         android:textStyle="italic"
-        app:layout_constraintStart_toEndOf="@+id/beerImage1"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintHorizontal_bias="0.469"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
         app:layout_constraintTop_toTopOf="@+id/imageView2" />
 
     <TextView
         android:id="@+id/beerIBU"
-        android:layout_width="73dp"
-        android:layout_height="22dp"
-        android:layout_marginTop="60dp"
-        android:textAlignment="textStart"
-        android:textColor="#000000"
+        android:layout_width="61dp"
+        android:layout_height="23dp"
+        android:layout_marginEnd="1dp"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary2"
         android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/beerDescription"
-        app:layout_constraintTop_toTopOf="@+id/imageView2" />
-
-    <TextView
-        android:id="@+id/beerTypeT"
-        android:layout_width="86dp"
-        android:layout_height="22dp"
-        android:textAlignment="textStart"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/beerDescription"
-        app:layout_constraintTop_toBottomOf="@+id/beerIBU" />
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintStart_toStartOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/imageView4" />
 
     <TextView
         android:id="@+id/beerABV"
-        android:layout_width="73dp"
+        android:layout_width="61dp"
         android:layout_height="22dp"
-        android:textAlignment="textStart"
-        android:textColor="#000000"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary2"
         android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/beerDescription"
-        app:layout_constraintTop_toBottomOf="@+id/beerTypeT" />
+        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+        app:layout_constraintEnd_toEndOf="@+id/imageView5"
+        app:layout_constraintStart_toStartOf="@+id/imageView5"
+        app:layout_constraintTop_toTopOf="@+id/imageView5" />
 
     <TextView
         android:id="@+id/beerDescription"
-        android:layout_width="153dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="18dp"
-        android:layout_marginBottom="16dp"
+        android:layout_width="0dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="30dp"
         android:textAlignment="textStart"
         android:textColor="#000000"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-        app:layout_constraintStart_toEndOf="@+id/beerImage1"
+        android:textSize="19sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
         app:layout_constraintTop_toBottomOf="@+id/beerTitleName" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/imprima"
+        android:text="IBU"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.071" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/imprima"
+        android:text="ABV"
+        android:textColor="@android:color/black"
+        android:textColorLink="@color/colorAccent"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:layout_constraintVertical_bias="0.409" />
 
 </android.support.constraint.ConstraintLayout>

@@ -5,9 +5,10 @@
     <string name="title_notifications">Notifications</string>
     <string name="locationTitle">Come Visit Us</string>
     <string name="locationSummary">Come see us in person to see more of our combinations</string>
+
     <string name="aboutUsTitle">Learn Our Story</string>
     <string name="aboutUsSummary">Emplore onto how we got to where we are today</string>
-    <!--Navigation Bar Items-->
+
     <string name="beerType">Beer Types</string>
     <string name="beerColor">Beer Color</string>
     <string name="combination">Combination</string>
@@ -86,8 +87,10 @@
 
 
     <!--Credits Screen Strings-->
-    <string name="viewpager">ViewPager Library</string>
-    <string name="viewpagerSource" translatable="false">com.github.devlight:infinitecycleviewpager:1.0.2</string>
+    <string name="libraries">Libraries</string>
+    <string name="viewpagerSource" translatable="false">ViewPager Library - com.github.devlight:infinitecycleviewpager:1.0.2</string>
+    <string name="recyclerViewSource" translatable="false">Expandable RecyclerView Library - https://bignerdranch.github.io/expandable-recycler-view/</string>
+    <string name="recyclerViewSource2" translatable="false">Expandable RecyclerView Library - https://github.com/thoughtbot/expandable-recycler-view</string>
     <string name="bottomNavigation">Bottom Navigation Icons</string>
     <string name="typeIconSource" translatable="false">Beer Types Icon - https://www.flaticon.com/authors/ddara</string>
     <string name="combinationIconSource" translatable="false">Combination Icon - https://www.flaticon.com/authors/eucalyp</string>
@@ -96,6 +99,29 @@
     <string name="settingsIconSource" translatable="false">Settings Icon - https://www.flaticon.com/authors/smashicons</string>
     <string name="mainApplication" translatable="false">Main Application Icon</string>
     <string name="mainApplicationSource" translatable="false">https://www.flaticon.com/authors/smashicons</string>
+    <string name="beerCombinationSource">Beer Combination Screen Icons</string>
+    <string name="chickenIcon">Chicken Icon - https://www.flaticon.com/authors/freepik</string>
+    <string name="fishIcon">Fish Icon - https://www.flaticon.com/authors/freepik</string>
+    <string name="cheeseIcon">Cheese Icon - https://www.flaticon.com/authors/smashicons</string>
+    <string name="chocolateIcon">Chocolate Icon - https://www.flaticon.com/authors/freepik</string>
+    <string name="oysterIcon">Sea Oysters Icon - https://www.flaticon.com/authors/freepik</string>
+    <string name="grilledIcon">Grilled Meat Icon - https://www.flaticon.com/authors/freepik</string>
+    <string name="sandwichIcon">Sandwich Icon - https://www.flaticon.com/authors/smashicons</string>
+    <string name="sushiIcon">Sushi Icon - https://www.flaticon.com/authors/freepik</string>
+    <string name="pieIcon">Dessert Icon - https://www.flaticon.com/authors/freepik</string>
+    <string name="bbqIcon">BBQd Ribs Icon - https://www.flaticon.com/authors/freepik</string>
+    <string name="shellfishIcon">Shellfish Icon - https://www.flaticon.com/authors/freepik</string>
+    <string name="steakIcon">Steak Icon - https://www.flaticon.com/authors/monkik</string>
+    <string name="saladIcon">Salad Icon - https://www.flaticon.com/authors/freepik</string>
+    <string name="mexicanIcon">Mexican Food Icon - https://www.flaticon.com/authors/smashicons</string>
+    <string name="salmonIcon">Salmon Icon - https://www.flaticon.com/authors/freepik</string>
+    <string name="burgerIcon">Burgers Icon - https://www.flaticon.com/authors/freepik</string>
+    <string name="puddingIcon">Puddings Icon - https://www.flaticon.com/authors/freepik</string>
+    <string name="spicyIcon">Spicy Food Icon - https://www.flaticon.com/authors/prettycons</string>
+    <string name="curryIcon">Curry Icon - https://www.flaticon.com/authors/freepik</string>
+    <string name="eggIcon">Egg Items Icon- https://www.flaticon.com/authors/pixel-buddha</string>
+    <string name="musselIcon">Mussel Food Icon - https://www.flaticon.com/authors/freepik</string>
+    <string name="porkIcon">Pork Icon - https://www.flaticon.com/authors/freepik</string>
 
     <!--Settings Screen Strings-->
     <string name="contactTitle">CONTACT</string>
