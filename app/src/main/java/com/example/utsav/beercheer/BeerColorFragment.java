@@ -314,8 +314,16 @@ public class BeerColorFragment extends Fragment {
 
                 ebc = 1.97 * srm;
 
-                srmResult.setText(String.valueOf(String.format("%.2f",srm)));
-                ebcResult.setText(String.valueOf(String.format("%.2f",ebc)));
+                if(srm > 40)
+                {
+                    srmResult.setText(String.valueOf(40.00));
+                    ebcResult.setText(String.valueOf(78.80));
+                }
+                else
+                {
+                    srmResult.setText(String.valueOf(String.format("%.2f",srm)));
+                    ebcResult.setText(String.valueOf(String.format("%.2f",ebc)));
+                }
 
                 switch ((int) srm)
                 {
