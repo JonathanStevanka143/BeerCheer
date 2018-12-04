@@ -39,7 +39,7 @@ public class BeerType extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    final bottomSheetControl bottomSheetControl = new bottomSheetControl();
+    bottomSheetControl bottomSheetControl = new bottomSheetControl();
     private OnFragmentInteractionListener mListener;
 
     public BeerType() {
@@ -77,6 +77,8 @@ public class BeerType extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_beer_type, container, false);
+
+        //create a bundle for the bottom sheet
 
 
 
@@ -151,14 +153,18 @@ public class BeerType extends Fragment {
 
             //create the information to point towards the button with moreinfo
             //this is our custom bottomSheetControl
-            final Button bottomSheetInfoButton = view.findViewById(R.id.beerSheetInfo);
-
+            Button bottomSheetInfoButton = view.findViewById(R.id.beerSheetInfo);
             bottomSheetInfoButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+//                    Bundle bundle = new Bundle();
+//                    bundle.putString("title", "oh ya");
+//                    bundle.putString("desc","awesomebeer");
+//                    bottomSheetControl.setArguments(bundle);
                     bottomSheetControl.show(getChildFragmentManager(),"bottomSheetControl");
-//                    bottomSheetControl.setBeerBottomDesc("test");
-//                    bottomSheetControl.setBeerBottomTitle("tester123");
+                    bottomSheetControl.setBeerBottomTitle("test Title");
+                    bottomSheetControl.setBeerBottomDesc("test desc");
+
                 }
             });
 
