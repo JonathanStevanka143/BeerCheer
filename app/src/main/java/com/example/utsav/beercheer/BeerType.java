@@ -40,6 +40,7 @@ public class BeerType extends Fragment {
     private String mParam1;
     private String mParam2;
     bottomSheetControl bottomSheetControl = new bottomSheetControl();
+
     private OnFragmentInteractionListener mListener;
 
     public BeerType() {
@@ -148,6 +149,7 @@ public class BeerType extends Fragment {
 
             beerImage.setImageResource(beerImages.get(position));
 
+            int beerPos = beerImages.get(position);
 
             container.addView(view);
 
@@ -157,13 +159,43 @@ public class BeerType extends Fragment {
             bottomSheetInfoButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-//                    Bundle bundle = new Bundle();
-//                    bundle.putString("title", "oh ya");
-//                    bundle.putString("desc","awesomebeer");
-//                    bottomSheetControl.setArguments(bundle);
+
+                    if(position==0){
+                        bottomSheetControl.setBeerBottomTitle("test0");
+                        bottomSheetControl.setBeerBottomDesc("test0");
+                    }
+                    else if(position==1){
+                        bottomSheetControl.setBeerBottomTitle("test1");
+                        bottomSheetControl.setBeerBottomDesc("test1");
+                    }
+                    else if(position==2){
+                        bottomSheetControl.setBeerBottomTitle("test2");
+                        bottomSheetControl.setBeerBottomDesc("test2");
+                    }
+                    else if(position==3){
+                        bottomSheetControl.setBeerBottomTitle("test3");
+                        bottomSheetControl.setBeerBottomDesc("test3");
+                    }
+                    else if(position==4){
+                        bottomSheetControl.setBeerBottomTitle("test4");
+                        bottomSheetControl.setBeerBottomDesc("test4");
+                    }
+                    else if(position==5){
+                        bottomSheetControl.setBeerBottomTitle("test5");
+                        bottomSheetControl.setBeerBottomDesc("test5");
+                    }
+                    else if(position==6){
+                        bottomSheetControl.setBeerBottomTitle("test6");
+                        bottomSheetControl.setBeerBottomDesc("test6");
+                    }
+                    else if(position==7) {
+                        bottomSheetControl.setBeerBottomTitle("test7");
+                        bottomSheetControl.setBeerBottomDesc("test7");
+                    }
+
+
                     bottomSheetControl.show(getChildFragmentManager(),"bottomSheetControl");
-                    bottomSheetControl.setBeerBottomTitle("test Title");
-                    bottomSheetControl.setBeerBottomDesc("test desc");
+
 
                 }
             });

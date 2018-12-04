@@ -13,8 +13,8 @@ import com.example.utsav.beercheer.R;
 
 public class bottomSheetControl  extends BottomSheetDialogFragment {
 
-    TextView beerBottomTitle = null;
-    TextView beerBottomDesc = null;
+    String beerBottomTitle;
+    String beerBottomDesc;
 //    String string1 = null;
 //    String string2 = null;
     //CREATE A CUSTOM CALLER FOR OUR BOTTOMSHEET CONTROL TAB
@@ -24,26 +24,31 @@ public class bottomSheetControl  extends BottomSheetDialogFragment {
         View view = inflater.inflate(R.layout.bottom_sheet, container, false);
 //        string1 = savedInstanceState.getString("title");
 //        string2 = savedInstanceState.getString("desc");
-        beerBottomTitle = view.findViewById(R.id.bottomBeerTitle);
-        beerBottomDesc = view.findViewById(R.id.bottomBeerDescription);
+        TextView beerBottomTitle = view.findViewById(R.id.bottomBeerTitle);
+        TextView beerBottomDesc = view.findViewById(R.id.bottomBeerDescription);
+
+        beerBottomTitle.setText(getBeerBottomTitle());
+        beerBottomDesc.setText(getBeerBottomDesc());
 
         return view;
     }
 
 
-    public TextView getBeerBottomTitle() {
+
+
+    public String getBeerBottomTitle() {
         return beerBottomTitle;
     }
 
     public void setBeerBottomTitle(String  beerBottomTitle) {
-        this.beerBottomTitle.setText(beerBottomTitle);
+        this.beerBottomTitle = beerBottomTitle;
     }
 
-    public TextView getBeerBottomDesc() {
+    public String getBeerBottomDesc() {
         return beerBottomDesc;
     }
 
     public void setBeerBottomDesc(String beerBottomDesc) {
-        this.beerBottomDesc.setText(beerBottomDesc);
+        this.beerBottomDesc = beerBottomDesc;
     }
 }
