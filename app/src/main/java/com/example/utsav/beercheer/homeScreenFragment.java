@@ -99,9 +99,9 @@ public class homeScreenFragment extends Fragment {
         //create the arrayList to hold the recommended beer items
         ArrayList<beerRecommended> recommendedBeer = new ArrayList<>();
         //create the items on this beer list items
-        recommendedBeer.add(new beerRecommended("Stout Beer","40","4.2%","is a traditional stout beer made from roasted barley, hops, yeast, and water."));
-        recommendedBeer.add(new beerRecommended("Porter","35","3.7%","Porter is a dark style of beer developed in London from well-hopped beers made from brown malt"));
-        recommendedBeer.add(new beerRecommended("Pale Ale","65","7.2%","From the beginning to the end you will always taste the fresh pure crispness of this Pale Ale."));
+        recommendedBeer.add(new beerRecommended("Stout Beer","Stout","40","4.2%","is a traditional stout beer made from roasted barley, hops, yeast, and water."));
+        recommendedBeer.add(new beerRecommended("Porter","Porter","35","3.7%","Porter is a dark style of beer developed in London from well-hopped beers made from brown malt"));
+        recommendedBeer.add(new beerRecommended("Pale Ale","Ale","65","7.2%","From the beginning to the end you will always taste the fresh pure crispness of this Pale Ale."));
 
 
         //create the arrayList to hold recommendedFoodTypes
@@ -156,6 +156,7 @@ public class homeScreenFragment extends Fragment {
             beerRecommended beerRecommended = getItem(position);
             //map the textview name to the text
             TextView beerName = viewConvert.findViewById(R.id.beerTitleName);
+            TextView beerType = viewConvert.findViewById(R.id.beerType);
             TextView beerIBU = viewConvert.findViewById(R.id.beerIBU);
             TextView beerABV = viewConvert.findViewById(R.id.beerABV);
             TextView beerDescription = viewConvert.findViewById(R.id.beerDescription);
@@ -163,6 +164,7 @@ public class homeScreenFragment extends Fragment {
 
 
             beerName.setText(beerRecommended.getBeerName());
+            beerType.setText(beerRecommended.getBeerType());
             beerIBU.setText(beerRecommended.getBeerIBU());
             beerABV.setText(beerRecommended.getBeerABV());
             beerDescription.setText(beerRecommended.getBeerDescription());
