@@ -23,7 +23,7 @@ import java.util.List;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link BeerType.OnFragmentInteractionListener} interface
+ * {@link OnFragmentInteractionListener} interface
  * to handle interaction events.
  * Use the {@link BeerType#newInstance} factory method to
  * create an instance of this fragment.
@@ -161,36 +161,36 @@ public class BeerType extends Fragment {
                 public void onClick(View v) {
 
                     if(position==0){
-                        bottomSheetControl.setBeerBottomTitle("test0");
-                        bottomSheetControl.setBeerBottomDesc("test0");
+                        bottomSheetControl.setBeerBottomTitle("Indian Pale Ale");
+                        bottomSheetControl.setBeerBottomDesc("Indian Pale Ale has been consumed in the United Kingdom since 1835. The modern incarnation is described as A hoppy, moderately-strong, very well-attenuated pale British ale with a dry finish and a hoppy aroma and taste.");
                     }
                     else if(position==1){
-                        bottomSheetControl.setBeerBottomTitle("test1");
-                        bottomSheetControl.setBeerBottomDesc("test1");
+                        bottomSheetControl.setBeerBottomTitle("Wheat Beer");
+                        bottomSheetControl.setBeerBottomDesc("Wheat beer is usually brewed with a large proportion of wheat relative to the amount of malted barley. The two main varieties are Weissbier and Witbier minor types include Lambic, Berliner Weisse and Gose.");
                     }
                     else if(position==2){
-                        bottomSheetControl.setBeerBottomTitle("test2");
-                        bottomSheetControl.setBeerBottomDesc("test2");
+                        bottomSheetControl.setBeerBottomTitle("Stout Beer");
+                        bottomSheetControl.setBeerBottomDesc("Stout is a dark beer, there are a number of stout beers including Baltic porter, Milk stout, and Imperial stout the most common variation is dry stout, exemplified by Guinness Draught, the world's best selling stout. ");
                     }
                     else if(position==3){
-                        bottomSheetControl.setBeerBottomTitle("test3");
-                        bottomSheetControl.setBeerBottomDesc("test3");
+                        bottomSheetControl.setBeerBottomTitle("Sour Beer");
+                        bottomSheetControl.setBeerBottomDesc("Sour beer is beer which has an intentionally acidic, tart or sour taste. The most common sour beer styles are Belgian: lambics, gueuze and Flanders red ale.");
                     }
                     else if(position==4){
-                        bottomSheetControl.setBeerBottomTitle("test4");
-                        bottomSheetControl.setBeerBottomDesc("test4");
+                        bottomSheetControl.setBeerBottomTitle("Porter");
+                        bottomSheetControl.setBeerBottomDesc("Porter is a dark style of beer developed in London from well-hopped beers made from brown malt. The name was first recorded in the 18th century, and is thought to come from its popularity with street and river porters.");
                     }
                     else if(position==5){
-                        bottomSheetControl.setBeerBottomTitle("test5");
-                        bottomSheetControl.setBeerBottomDesc("test5");
+                        bottomSheetControl.setBeerBottomTitle("Pilsner");
+                        bottomSheetControl.setBeerBottomDesc("Pilsner is a type of pale lager. It takes its name from the Bohemian city of Pilsen, where it was first produced in 1842. The world’s first blond lager, the original Pilsner Urquell, is still produced there today.");
                     }
                     else if(position==6){
-                        bottomSheetControl.setBeerBottomTitle("test6");
-                        bottomSheetControl.setBeerBottomDesc("test6");
+                        bottomSheetControl.setBeerBottomTitle("Pale Ale");
+                        bottomSheetControl.setBeerBottomDesc("Pale ale is an ale made with mainly pale malt. The highest proportion of pale malts results in a lighter colour. The term pale ale first appeared around 1703 for beers made from malts dried with coke, which resulted in a lighter colour than other beers popular at that time.");
                     }
                     else if(position==7) {
-                        bottomSheetControl.setBeerBottomTitle("test7");
-                        bottomSheetControl.setBeerBottomDesc("test7");
+                        bottomSheetControl.setBeerBottomTitle("Lager");
+                        bottomSheetControl.setBeerBottomDesc("Lager is a type of beer conditioned at low temperatures. The term may also be used as a verb to describe the cold-conditioning process. Lagers can be pale, amber, or dark. Pale lager is the most widely consumed and commercially available style of beer.");
                     }
 
 
