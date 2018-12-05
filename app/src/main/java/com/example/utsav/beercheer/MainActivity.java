@@ -16,7 +16,8 @@ public class MainActivity extends AppCompatActivity implements
         SettingsFragment.OnFragmentInteractionListener,
         homeScreenFragment.OnFragmentInteractionListener,
         CombinationFragment.OnFragmentInteractionListener,
-        BeerColorFragment.OnFragmentInteractionListener
+        BeerColorFragment.OnFragmentInteractionListener,
+        learnOurStory.OnFragmentInteractionListener
 {
 
     private TextView mTextMessage;
