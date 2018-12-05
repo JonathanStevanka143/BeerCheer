@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/eachBeerImage"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
+        android:layout_width="338dp"
+        android:layout_height="341dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,13 +21,13 @@
         android:id="@+id/beerSheetInfo"
         android:layout_width="160dp"
         android:layout_height="44dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="89dp"
+        android:layout_marginBottom="6dp"
         android:background="@drawable/button_layout"
         android:text="More Info"
         android:textAllCaps="true"
         android:textColor="@android:color/background_light"
-        app:layout_constraintStart_toStartOf="@+id/eachBeerImage"
-        app:layout_constraintTop_toBottomOf="@+id/eachBeerImage" />
+        app:layout_constraintBottom_toBottomOf="@+id/eachBeerImage"
+        app:layout_constraintStart_toStartOf="@+id/eachBeerImage" />
 
 </android.support.constraint.ConstraintLayout>
