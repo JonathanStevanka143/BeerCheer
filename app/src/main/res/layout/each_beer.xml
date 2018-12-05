@@ -19,15 +19,15 @@
 
     <Button
         android:id="@+id/beerSheetInfo"
-        android:layout_width="108dp"
+        android:layout_width="160dp"
         android:layout_height="44dp"
-        android:layout_marginStart="180dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/button_layout"
         android:text="More Info"
         android:textAllCaps="true"
         android:textColor="@android:color/background_light"
-        app:layout_constraintBottom_toBottomOf="@+id/eachBeerImage"
-        app:layout_constraintStart_toStartOf="@+id/eachBeerImage" />
+        app:layout_constraintStart_toStartOf="@+id/eachBeerImage"
+        app:layout_constraintTop_toBottomOf="@+id/eachBeerImage" />
 
 </android.support.constraint.ConstraintLayout>

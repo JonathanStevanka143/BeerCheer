@@ -122,6 +122,9 @@
     <string name="eggIcon">Egg Items Icon- https://www.flaticon.com/authors/pixel-buddha</string>
     <string name="musselIcon">Mussel Food Icon - https://www.flaticon.com/authors/freepik</string>
     <string name="porkIcon">Pork Icon - https://www.flaticon.com/authors/freepik</string>
+    <string name="wikipediaIcon">Bottom sheet descriptions for beer - https://en.wikipedia.org/wiki/Pale_ale -
+        https://en.wikipedia.org/wiki/Pale_ale#Amber_ale - https://en.wikipedia.org/wiki/Pale_ale#India_pale_ale_(IPA) -
+        https://en.wikipedia.org/wiki/Sour_beer</string>
 
     <!--Settings Screen Strings-->
     <string name="contactTitle">CONTACT</string>
@@ -179,5 +182,6 @@
     <string name="ebc">EBC:</string>
     <string name="approx">Approx Color:</string>
 
-
+    
+    
 </resources>
