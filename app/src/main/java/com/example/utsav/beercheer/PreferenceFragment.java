@@ -29,8 +29,20 @@ public class PreferenceFragment extends PreferenceFragmentCompat
         Preference callPreference = findPreference("call");
         Preference licensePreference = findPreference("license");
         Preference creditsPreference = findPreference("credits");
-
+        Preference learnOurStory = findPreference("aboutUs");
         Preference locationPreference = findPreference("location");
+
+
+        learnOurStory.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+                transaction = fm.beginTransaction();
+                transaction.replace(R.id.settingsFragment, new learnOurStory());
+                transaction.addToBackStack(null);
+                transaction.commit();
+                return false;
+            }
+        });
 
         locationPreference.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override
