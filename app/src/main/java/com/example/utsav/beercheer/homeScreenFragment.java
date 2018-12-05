@@ -99,9 +99,9 @@ public class homeScreenFragment extends Fragment {
         //create the arrayList to hold the recommended beer items
         ArrayList<beerRecommended> recommendedBeer = new ArrayList<>();
         //create the items on this beer list items
-        recommendedBeer.add(new beerRecommended("Stout Beer","40","4.2%","is a traditional stout beer made from roasted barley, hops, yeast, and water."));
-        recommendedBeer.add(new beerRecommended("Porter","35","3.7%","Porter is a dark style of beer developed in London from well-hopped beers made from brown malt"));
-        recommendedBeer.add(new beerRecommended("Pale Ale","65","7.2%","From the beginning to the end you will always taste the fresh pure crispness of this Pale Ale."));
+        recommendedBeer.add(new beerRecommended("Stout Beer","Stout","40","4.2%","is a traditional stout beer made from roasted barley, hops, yeast, and water."));
+        recommendedBeer.add(new beerRecommended("Porter","Porter","35","3.7%","Porter is a dark style of beer developed in London from well-hopped beers made from brown malt"));
+        recommendedBeer.add(new beerRecommended("Pale Ale","Ale","65","7.2%","From the beginning to the end you will always taste the fresh pure crispness of this Pale Ale."));
 
 
         //create the arrayList to hold recommendedFoodTypes
@@ -116,8 +116,8 @@ public class homeScreenFragment extends Fragment {
         //create the arrayList to hold information about the authors of the program
         ArrayList<creatorInsight> creatorInsightsList = new ArrayList<>();
         //create the items for the creatorinsight listview
-        creatorInsightsList.add(new creatorInsight(R.drawable.me,"Jonathan Stevanka","Recommened pick: Try out the Stout beer with a nice fat juicy burger from your favourite restaurant!!","Description: I am a very open minded person open to new ideas and opportunities."));
-        creatorInsightsList.add(new creatorInsight(R.drawable.dave,"Dave Utsav","N/A","asdasdsadasdsdasdasdasdsdasdsaasdasdsadasdsdasdasdasdsdasdsaasdasdsadasdsdasdasdasdsdasdsaasdasdsadasdsdasdasdasdsdasdsaasdasdsadasdsdasdasdasdsdasdsaasdasdsadasdsdasdasdasdsdasdsaasdasdsadasdsdasdasdasdsdasdsaasdasdsadasdsdasdasdasdsdasdsaasdasdsadasdsdasdasdasdsdasdsaasdasdsadasdsdasdasdasdsdasdsa"));
+        creatorInsightsList.add(new creatorInsight("ABOUT THIS APP","BeerCheer is where your taste buds meets your interests. This app is for those who wants to know more about beer, its types, and for the nerdy ones who wants to calculate beer colour. This app also shows you the combination of food with each beer types."));
+        creatorInsightsList.add(new creatorInsight("OUR MOTIVATION","We're obsessively passionate about beers. We found out that there are very few apps on beer and we saw that as an opportunity."));
 
 
 
@@ -156,13 +156,14 @@ public class homeScreenFragment extends Fragment {
             beerRecommended beerRecommended = getItem(position);
             //map the textview name to the text
             TextView beerName = viewConvert.findViewById(R.id.beerTitleName);
+            TextView beerType = viewConvert.findViewById(R.id.beerType);
             TextView beerIBU = viewConvert.findViewById(R.id.beerIBU);
             TextView beerABV = viewConvert.findViewById(R.id.beerABV);
             TextView beerDescription = viewConvert.findViewById(R.id.beerDescription);
-            ImageView beerImage = viewConvert.findViewById(R.id.beerImage1);
 
 
             beerName.setText(beerRecommended.getBeerName());
+            beerType.setText(beerRecommended.getBeerType());
             beerIBU.setText(beerRecommended.getBeerIBU());
             beerABV.setText(beerRecommended.getBeerABV());
             beerDescription.setText(beerRecommended.getBeerDescription());
@@ -218,14 +219,10 @@ public class homeScreenFragment extends Fragment {
             creatorInsight creatorInsight = getItem(position);
             //map the textview name to the text
             TextView creatorName =  viewConvert.findViewById(R.id.creatorNamee);
-            TextView creatorFavourite = viewConvert.findViewById(R.id.creatorsChoice);
             TextView creatorDesc = viewConvert.findViewById(R.id.creatorDescription);
-            ImageView creatorImg = viewConvert.findViewById(R.id.creatorImg);
 
             creatorName.setText(creatorInsight.getCreatorName());
-            creatorFavourite.setText(creatorInsight.getCreatorPick());
             creatorDesc.setText(creatorInsight.getCreatorDescription());
-            creatorImg.setImageResource(creatorInsight.getCreatorImg());
 
 
 
