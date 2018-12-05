@@ -309,10 +309,10 @@
 
             <TextView
                 android:id="@+id/colorResult"
-                android:layout_width="93dp"
+                android:layout_width="153dp"
                 android:layout_height="35dp"
-                android:layout_marginEnd="80dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="4dp"
                 android:background="#f5974a"
                 android:text=""
                 android:textColor="#000000"
