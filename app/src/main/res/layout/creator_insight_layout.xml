@@ -9,7 +9,7 @@
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="0dp"
-        android:layout_height="224dp"
+        android:layout_height="197dp"
         android:layout_marginStart="15dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="15dp"
@@ -18,56 +18,33 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/bottom_sheet_layout" />
 
-    <ImageView
-        android:id="@+id/creatorImg"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="4dp"
-        app:layout_constraintEnd_toStartOf="@+id/creatorDescription"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars[8]" />
-
     <TextView
         android:id="@+id/creatorNamee"
-        android:layout_width="197dp"
-        android:layout_height="21dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="8dp"
+        android:layout_width="0dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/imprima"
         android:textAlignment="center"
-        android:textColor="#000000"
+        android:textColor="@color/colorAccent"
         android:textSize="21sp"
-        android:textStyle="italic"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/imageView3"
-        app:layout_constraintStart_toEndOf="@+id/creatorImg"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/creatorsChoice"
-        android:layout_width="219dp"
-        android:layout_height="83dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="textStart"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView3"
-        app:layout_constraintHorizontal_bias="0.566"
-        app:layout_constraintStart_toEndOf="@+id/creatorImg"
-        app:layout_constraintTop_toBottomOf="@+id/creatorNamee" />
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3" />
 
     <TextView
         android:id="@+id/creatorDescription"
-        android:layout_width="219dp"
-        android:layout_height="52dp"
+        android:layout_width="0dp"
+        android:layout_height="113dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="20dp"
         android:textAlignment="textStart"
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/imageView3"
-        app:layout_constraintStart_toEndOf="@+id/creatorImg"
-        app:layout_constraintTop_toBottomOf="@+id/creatorsChoice" />
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/creatorNamee" />
 </android.support.constraint.ConstraintLayout>

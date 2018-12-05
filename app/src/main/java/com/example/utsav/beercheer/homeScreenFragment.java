@@ -116,8 +116,8 @@ public class homeScreenFragment extends Fragment {
         //create the arrayList to hold information about the authors of the program
         ArrayList<creatorInsight> creatorInsightsList = new ArrayList<>();
         //create the items for the creatorinsight listview
-        creatorInsightsList.add(new creatorInsight(R.drawable.me,"Jonathan Stevanka","Recommened pick: Try out the Stout beer with a nice fat juicy burger from your favourite restaurant!!","Description: I am a very open minded person open to new ideas and opportunities."));
-        creatorInsightsList.add(new creatorInsight(R.drawable.dave,"Dave Utsav","N/A","asdasdsadasdsdasdasdasdsdasdsaasdasdsadasdsdasdasdasdsdasdsaasdasdsadasdsdasdasdasdsdasdsaasdasdsadasdsdasdasdasdsdasdsaasdasdsadasdsdasdasdasdsdasdsaasdasdsadasdsdasdasdasdsdasdsaasdasdsadasdsdasdasdasdsdasdsaasdasdsadasdsdasdasdasdsdasdsaasdasdsadasdsdasdasdasdsdasdsaasdasdsadasdsdasdasdasdsdasdsa"));
+        creatorInsightsList.add(new creatorInsight("ABOUT THIS APP","BeerCheer is where your taste buds meets your interests. This app is for those who wants to know more about beer, its types, and for the nerdy ones who wants to calculate beer colour. This app also shows you the combination of food with each beer types."));
+        creatorInsightsList.add(new creatorInsight("OUR MOTIVATION","We're obsessively passionate about beers. We found out that there are very few apps on beer and we saw that as an opportunity."));
 
 
 
@@ -160,7 +160,6 @@ public class homeScreenFragment extends Fragment {
             TextView beerIBU = viewConvert.findViewById(R.id.beerIBU);
             TextView beerABV = viewConvert.findViewById(R.id.beerABV);
             TextView beerDescription = viewConvert.findViewById(R.id.beerDescription);
-            ImageView beerImage = viewConvert.findViewById(R.id.beerImage1);
 
 
             beerName.setText(beerRecommended.getBeerName());
@@ -220,14 +219,10 @@ public class homeScreenFragment extends Fragment {
             creatorInsight creatorInsight = getItem(position);
             //map the textview name to the text
             TextView creatorName =  viewConvert.findViewById(R.id.creatorNamee);
-            TextView creatorFavourite = viewConvert.findViewById(R.id.creatorsChoice);
             TextView creatorDesc = viewConvert.findViewById(R.id.creatorDescription);
-            ImageView creatorImg = viewConvert.findViewById(R.id.creatorImg);
 
             creatorName.setText(creatorInsight.getCreatorName());
-            creatorFavourite.setText(creatorInsight.getCreatorPick());
             creatorDesc.setText(creatorInsight.getCreatorDescription());
-            creatorImg.setImageResource(creatorInsight.getCreatorImg());
 
 
 
