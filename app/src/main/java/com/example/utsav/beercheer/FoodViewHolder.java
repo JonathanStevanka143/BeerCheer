@@ -9,8 +9,9 @@ import com.bignerdranch.expandablerecyclerview.ChildViewHolder;
 
 public class FoodViewHolder extends com.thoughtbot.expandablerecyclerview.viewholders.ChildViewHolder
 {
-
+    //create a textview datatext
     private TextView dataText;
+    //create an imageview called dataimage
     private ImageView dataImage;
 
     /**

@@ -19,12 +19,12 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/beerRecommendedTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:fontFamily="@font/raleway"
-                android:text="Recommended Beer"
+                android:text="@string/recommendedBeerTitle"
                 android:textAlignment="center"
                 android:textColor="@color/ic_launcher_background"
                 android:textSize="26sp" />
@@ -40,12 +40,12 @@
             </ListView>
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/recommendedFoodTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/raleway"
                 android:paddingTop="10dp"
-                android:text="Recommended Food and Beer"
+                android:text="@string/recommendedFoodTitle"
                 android:textAlignment="center"
                 android:textColor="@color/ic_launcher_background"
                 android:textSize="24sp" />
@@ -60,11 +60,11 @@
             </ListView>
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/creatorInsightTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/raleway"
-                android:text="Creator Insight"
+                android:text="@string/creatorInsightTitle"
                 android:textAlignment="center"
                 android:textColor="@color/ic_launcher_background"
                 android:textSize="24sp" />

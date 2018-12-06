@@ -13,9 +13,10 @@ import java.util.List;
 
 public class CustomSpinnerAdapter extends ArrayAdapter<Grain>
 {
-
+    //create a context called context
     private Context context;
 
+    //create an array of Grain called grains
     private Grain[] grains;
 
 
