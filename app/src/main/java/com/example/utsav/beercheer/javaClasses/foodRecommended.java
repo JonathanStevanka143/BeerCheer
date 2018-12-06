@@ -2,14 +2,17 @@ package com.example.utsav.beercheer.javaClasses;
 
 public class foodRecommended {
 
+    //create the beerimg for the drawable ID reference
     int beerimg;
     private String foodName;
+    //create the string for the foodname
     private String foodDescription;
-
+    //create the string for the foodDescription
+    //empty construct
     public foodRecommended() {
 
     }
-
+    //full construct
     public foodRecommended(int beerimg,String foodName, String foodDescription) {
         this.beerimg = beerimg;
 

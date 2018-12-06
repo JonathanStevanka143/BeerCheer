@@ -99,7 +99,7 @@ public class homeScreenFragment extends Fragment {
         //create the arrayList to hold the recommended beer items
         ArrayList<beerRecommended> recommendedBeer = new ArrayList<>();
         //create the items on this beer list items
-        recommendedBeer.add(new beerRecommended("Stout Beer","Stout","40","4.2%","is a traditional stout beer made from roasted barley, hops, yeast, and water."));
+        recommendedBeer.add(new beerRecommended("Stout Beer","Stout","40","4.2%","Is a traditional stout beer made from roasted barley, hops, yeast, and water."));
         recommendedBeer.add(new beerRecommended("Porter","Porter","35","3.7%","Porter is a dark style of beer developed in London from well-hopped beers made from brown malt"));
         recommendedBeer.add(new beerRecommended("Pale Ale","Ale","65","7.2%","From the beginning to the end you will always taste the fresh pure crispness of this Pale Ale."));
 

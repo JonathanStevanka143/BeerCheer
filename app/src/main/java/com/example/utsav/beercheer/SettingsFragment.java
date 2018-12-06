@@ -66,15 +66,18 @@ public class SettingsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
+        //create a fragment manager
         FragmentManager fm = getFragmentManager();
+        //create a new fragment transaction
         FragmentTransaction transaction= fm.beginTransaction();
 
+        //externalize the view into a view
         View view = inflater.inflate(R.layout.fragment_settings, container, false);
 
+        //replace what is on the screen
         transaction.replace(R.id.settingsFragment,new PreferenceFragment()).commit();
 
-
+        //return the view
         return view;
     }
 

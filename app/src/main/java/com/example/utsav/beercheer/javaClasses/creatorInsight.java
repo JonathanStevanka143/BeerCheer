@@ -2,9 +2,9 @@ package com.example.utsav.beercheer.javaClasses;
 
 public class creatorInsight {
 
-    private int creatorImg;
+    //create the creator name string
     private String creatorName;
-    private String creatorPick;
+    //create the creator description string
     private String creatorDescription;
 
     public creatorInsight() {
@@ -18,10 +18,6 @@ public class creatorInsight {
 
     public String getCreatorName() {
         return creatorName;
-    }
-
-    public String getCreatorPick() {
-        return creatorPick;
     }
 
     public String getCreatorDescription() {

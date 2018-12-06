@@ -182,5 +182,29 @@
     <string name="ebc">EBC:</string>
     <string name="approx">Approx Color:</string>
 
+    <!-- Screen Strings-->
+    <string name="recommendedBeerTitle">Recommended Beer</string>
+    <string name="recommendedFoodTitle">Recommended Food and Beer</string>
+    <string name="creatorInsightTitle">Creator Insight</string>
+
+
+    <!-- learn our story screen Strings-->
+
+    <string name="learnOurStoryTitle">LearnOurStory</string>
+    <string name="creatorDescription">Hello my name is jonathan stevanka, i enjoy building android applications, java applications, and doing personal hobbies.</string>
+    <string name="creatorDescription2">Hey there my name is Dave. I enjoy creating softwares, websites, apps. I try my best to create something valuable for our community.</string>
+    <string name="creatorTitle">Dave Utsav</string>
+    <string name="creatorTitle2">Jonathan Stevanka</string>
+
+    <!--beer layout Screen Strings-->
+    <string name="IBUtext">IBU</string>
+    <string name="TypeText">TYPE</string>
+    <string name="ABVText">ABV</string>
+
+
+
+
+
+
 
 </resources>

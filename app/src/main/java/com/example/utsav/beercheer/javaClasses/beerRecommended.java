@@ -4,16 +4,23 @@ import android.graphics.drawable.Drawable;
 
 public class beerRecommended {
 
+    //create a string called beerName
     private String beerName;
+    //create a string called beerIBU
     private String beerIBU;
+    //create a string called beerABV
     private String beerABV;
+    //create a string called beerDescription
     private String beerDescription;
+    //create a string called beerType
     private String beerType;
 
+    //empty construct
     public beerRecommended() {
 
     }
 
+    //full construct
     public beerRecommended(String beerName,String beerType, String beerIBU, String beerABV, String beerDescription) {
         this.beerName = beerName;
         this.beerType = beerType;

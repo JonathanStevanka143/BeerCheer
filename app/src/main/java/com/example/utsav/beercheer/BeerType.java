@@ -82,11 +82,11 @@ public class BeerType extends Fragment {
         //create a bundle for the bottom sheet
 
 
-
+        //initialize the startup data
         initData();
-
+        //create a viewpager
         HorizontalInfiniteCycleViewPager viewPager = view.findViewById(R.id.viewPager);
-
+        //instanate a new custom adapter
         CustomAdapter adapter = new CustomAdapter(beerImages,getContext());
 
         viewPager.setAdapter(adapter);
@@ -99,6 +99,7 @@ public class BeerType extends Fragment {
 
     private void initData()
     {
+        //addd the images to the viewpager
         beerImages.add(R.drawable.ipa);
         beerImages.add(R.drawable.wheat);
         beerImages.add(R.drawable.stout);
@@ -111,11 +112,14 @@ public class BeerType extends Fragment {
 
     public class CustomAdapter extends PagerAdapter
     {
-
+        //create a list
         List<Integer> beerImages;
+        //create a context
         Context context;
+        //create a layout inflater
         LayoutInflater layoutInflater;
 
+        //public constructor
         public CustomAdapter(List<Integer> beerImages, Context context)
         {
             this.beerImages = beerImages;
