@@ -13,6 +13,7 @@ import com.example.utsav.beercheer.R;
 
 public class bottomSheetControl  extends BottomSheetDialogFragment {
 
+    //create the string that we will set our desired text too for the bottom sheet
     String beerBottomTitle;
     String beerBottomDesc;
 //    String string1 = null;
@@ -21,15 +22,17 @@ public class bottomSheetControl  extends BottomSheetDialogFragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        //externalize the view
         View view = inflater.inflate(R.layout.bottom_sheet, container, false);
-//        string1 = savedInstanceState.getString("title");
-//        string2 = savedInstanceState.getString("desc");
+        //create a connection for the beerbottomtitle
         TextView beerBottomTitle = view.findViewById(R.id.bottomBeerTitle);
+        //create a connection for the textview beerbottomdesc
         TextView beerBottomDesc = view.findViewById(R.id.bottomBeerDescription);
-
+        //set the title for the bottom sheet upon click
         beerBottomTitle.setText(getBeerBottomTitle());
+        //set the desc for the bottom sheet upon click
         beerBottomDesc.setText(getBeerBottomDesc());
-
+        //return the view
         return view;
     }
 

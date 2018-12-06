@@ -69,47 +69,55 @@ public class CombinationFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        //externalize the view into a view
         View view = inflater.inflate(R.layout.fragment_combination, container, false);
 
+        //create a recyclerview
         RecyclerView recyclerView = view.findViewById(R.id.combinationRecyclerView);
-
+        //set the layout for the recyclerview
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-
+        //create an arraylist of beers
         ArrayList<Beer> beers = new ArrayList<>();
-
+        //create an arraylist of food
         ArrayList<Food> lagerFood = new ArrayList<>();
+        //add new food objects to the food array
         lagerFood.add(new Food(R.drawable.chicken,R.string.chicken));
         lagerFood.add(new Food(R.drawable.fish,R.string.fish));
         lagerFood.add(new Food(R.drawable.cheese,R.string.cheese));
-
+        //create a new beer class
         Beer lagerBeer = new Beer("Lager Beer",lagerFood);
+        //add the lagerbeer to the beer class we just made
         beers.add(lagerBeer);
-
+        //create a new food class
         ArrayList<Food> stoutFood = new ArrayList<>();
+        //add the items to the class
         stoutFood.add(new Food(R.drawable.chocolate,R.string.chocolate));
         stoutFood.add(new Food(R.drawable.oyster,R.string.oyster));
         stoutFood.add(new Food(R.drawable.grilled,R.string.oyster));
-
+        //create a new beer class
         Beer stoutBeer = new Beer("Stout Beer",stoutFood);
         beers.add(stoutBeer);
-
+        //create a new foodd class
         ArrayList<Food> pilsnerFood = new ArrayList<>();
+        //add the items to the class
         pilsnerFood.add(new Food(R.drawable.sandwich,R.string.sandwich));
         pilsnerFood.add(new Food(R.drawable.sushi,R.string.sushi));
         pilsnerFood.add(new Food(R.drawable.pie,R.string.pie));
-
+        //create a new beer class
         Beer pilsnerBeer = new Beer("Pilsner Beer",pilsnerFood);
         beers.add(pilsnerBeer);
-
+        //create a new food class
         ArrayList<Food> porterFood = new ArrayList<>();
+        //add the items to the class
         porterFood.add(new Food(R.drawable.bbq,R.string.bbq));
         porterFood.add(new Food(R.drawable.shellfish,R.string.shellfish));
         porterFood.add(new Food(R.drawable.steak,R.string.steak));
-
+        //create a new beer class
         Beer porterBeer = new Beer("Porter Beer",porterFood);
         beers.add(porterBeer);
-
+        //create a new food class
         ArrayList<Food> wheatFood = new ArrayList<>();
+        //add the items to the class
         wheatFood.add(new Food(R.drawable.vegetables,R.string.salad));
         wheatFood.add(new Food(R.drawable.mexican,R.string.mexican));
         wheatFood.add(new Food(R.drawable.salmon,R.string.salmon));
@@ -118,6 +126,7 @@ public class CombinationFragment extends Fragment {
         beers.add(wheatBeer);
 
         ArrayList<Food> palealeFood = new ArrayList<>();
+        //add the items to the class
         palealeFood.add(new Food(R.drawable.burger,R.string.burger));
         palealeFood.add(new Food(R.drawable.pudding,R.string.pudding));
         palealeFood.add(new Food(R.drawable.cheese_2,R.string.cheese));
@@ -126,6 +135,7 @@ public class CombinationFragment extends Fragment {
         beers.add(paleAleBeer);
 
         ArrayList<Food> ipaFood = new ArrayList<>();
+        //add the items to the class
         ipaFood.add(new Food(R.drawable.spicy,R.string.spicy));
         ipaFood.add(new Food(R.drawable.curry,R.string.curry));
         ipaFood.add(new Food(R.drawable.grilled,R.string.grilled));
@@ -134,11 +144,13 @@ public class CombinationFragment extends Fragment {
         beers.add(ipaBeer);
 
         ArrayList<Food> sourFood = new ArrayList<>();
+        //add the items to the class
         sourFood.add(new Food(R.drawable.egg,R.string.egg));
         sourFood.add(new Food(R.drawable.mussel,R.string.mussel));
         sourFood.add(new Food(R.drawable.pork,R.string.pork));
 
         Beer sourBeer = new Beer("Sour Beer",sourFood);
+        //add the items to the class
         beers.add(sourBeer);
 
         FoodAdapter adapter = new FoodAdapter(beers);

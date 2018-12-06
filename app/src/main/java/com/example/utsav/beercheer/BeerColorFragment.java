@@ -37,19 +37,24 @@ public class BeerColorFragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
+    //create the edittext's that we will need in this fragment
     EditText inputValue,inputValue2,inputValue3, batchSize;
-
+    //create the spinners
     Spinner spinner, spinner2, spinner3;
+    //create a class for the customadap
     CustomSpinnerAdapter customSpinnerAdapter;
-
+    //create a radiogroup
     RadioGroup unitsGroup;
-
+    //create the textview's
     TextView litersGallons, kgPounds, srmResult, ebcResult, approx;
-
+    //create the buttons we will need for this fragment
     Button updateButton, resetButton;
 
+    //create the doubles we will need for this fragment
     double totalLovibond,lovibond,lovibond2,lovibond3,srm,ebc, volume;
+    //create the doubles we will need for this fragment
     double weight,weight2,weight3;
+    //create the doubles we will need for this fragment
     double mcu,mcu2,mcu3,totalMcu;
 
     // TODO: Rename and change types of parameters
@@ -72,6 +77,7 @@ public class BeerColorFragment extends Fragment {
      */
     // TODO: Rename and change types and number of parameters
     public static BeerColorFragment newInstance(String param1, String param2) {
+        //create the beercolorfragment we will need for this fragment
         BeerColorFragment fragment = new BeerColorFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
@@ -94,39 +100,60 @@ public class BeerColorFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_beer_color, container, false);
         // Inflate the layout for this fragment
-
+        //target the unitgroup for this unitgroups variable so we can track which is clicked
         unitsGroup = view.findViewById(R.id.unitsGroup);
 
+        //target the resource value
         litersGallons = view.findViewById(R.id.litersGallons);
+        //target the resource value
         kgPounds = view.findViewById(R.id.kgPounds);
+        //target the resource value
         spinner = view.findViewById(R.id.spinner);
+        //target the resource value
         spinner2 = view.findViewById(R.id.spinner2);
+        //target the resource value
         spinner3 = view.findViewById(R.id.spinner3);
-
+        //target the resource value
         inputValue = view.findViewById(R.id.inputValue);
+        //target the resource value
         inputValue2 = view.findViewById(R.id.inputValue2);
+        //target the resource value
         inputValue3 = view.findViewById(R.id.inputValue3);
+        //target the resource value
         batchSize = view.findViewById(R.id.batchSize);
-
+        //target the resource value
         srmResult = view.findViewById(R.id.srmResult);
+        //target the resource value
         ebcResult = view.findViewById(R.id.ebcResult);
+        //target the resource value
         approx = view.findViewById(R.id.colorResult);
-
+        //target the update button
         updateButton = view.findViewById(R.id.updateButton);
+        //create the reset button
         resetButton = view.findViewById(R.id.resetButton);
 
+        //create a new grain array
         Grain[] grains = new Grain[16];
 
+        //target this position in the array
         grains[0] = new Grain();
+        //set this bond
         grains[0].setLovibond(140);
+        //set this grain name
         grains[0].setGrainName("Crystal Malt 10L");
 
+        //target this position in the array
         grains[1] = new Grain();
+        //set this bond
         grains[1].setLovibond(500);
+        //set this grain name
         grains[1].setGrainName("Black Malt");
 
+        //target this position in the array
         grains[2] = new Grain();
+        //set this bond
         grains[2].setLovibond(300);
+        //set this grain name
         grains[2].setGrainName("Roasted Barley");
 
         grains[3] = new Grain();
@@ -181,21 +208,16 @@ public class BeerColorFragment extends Fragment {
         grains[15].setLovibond(56);
         grains[15].setGrainName("Caramunich Malt");
 
-//        grainArrayList.add(new Grain(21,"Caravienne Malt"));
-//        grainArrayList.add(new Grain(2.9,"Pale Ale Malt"));
-//        grainArrayList.add(new Grain(1.5,"Pilsen Malt"));
-//        grainArrayList.add(new Grain(180,"Special B Malt"));
-//        grainArrayList.add(new Grain(2.4,"Scotmalt Golden Promise"));
-
-
+        //create a new custom adapter
         customSpinnerAdapter = new CustomSpinnerAdapter(getContext(),R.layout.spinner_item,grains);
 
+        //set the adapter to the following classes
         spinner.setAdapter(customSpinnerAdapter);
         spinner2.setAdapter(customSpinnerAdapter);
         spinner3.setAdapter(customSpinnerAdapter);
 
 
-
+        //set the item selected listener
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
@@ -211,7 +233,7 @@ public class BeerColorFragment extends Fragment {
 
             }
         });
-
+        //set the item selected listener
         spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
@@ -224,7 +246,7 @@ public class BeerColorFragment extends Fragment {
             @Override
             public void onNothingSelected(AdapterView<?> parent) { }
         });
-
+        //set the item selected listener
         spinner3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
@@ -237,7 +259,7 @@ public class BeerColorFragment extends Fragment {
             @Override
             public void onNothingSelected(AdapterView<?> parent) { }
         });
-
+        //set the item selected listener
         unitsGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -259,11 +281,14 @@ public class BeerColorFragment extends Fragment {
                 }
             }
         });
-
+        //set the item selected listener
         updateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
+                /**
+                 * create if statements to see what if the inpulvalues are empty
+                 */
                 if(inputValue.getText().toString().trim().length() != 0)
                 {
                     weight = Double.parseDouble(inputValue.getText().toString());
@@ -279,8 +304,10 @@ public class BeerColorFragment extends Fragment {
                     weight3 = Double.parseDouble(inputValue3.getText().toString());
                 }
 
+                //get the volume from the batchsize
                 volume = Double.parseDouble(batchSize.getText().toString());
 
+                //create an if statement to see if KG was selected
                 if(kgPounds.getText() == "Pounds")
                 {
                     weight *= 2.20;
@@ -288,11 +315,13 @@ public class BeerColorFragment extends Fragment {
                     weight3 *= 2.20;
                 }
 
+                //create an if statement to see if gallons was selected
                 if(litersGallons.getText() == "Gallons")
                 {
                     volume *= 0.264;
                 }
 
+                //log the value
                 Log.i("test",String.valueOf(weight));
 
                 totalLovibond = lovibond+lovibond2+lovibond3;
@@ -316,17 +345,24 @@ public class BeerColorFragment extends Fragment {
 
                 if(srm > 40)
                 {
+                    //set the text value
                     srmResult.setText(String.valueOf(40.00));
                     ebcResult.setText(String.valueOf(78.80));
                 }
                 else
                 {
+                    //set the text value
                     srmResult.setText(String.valueOf(String.format("%.2f",srm)));
                     ebcResult.setText(String.valueOf(String.format("%.2f",ebc)));
                 }
 
                 switch ((int) srm)
                 {
+
+                    /**
+                     * create switch statements to estimate the approximate color of the input values selected
+                     */
+
                     case 1:
                         approx.setBackgroundColor(Color.parseColor("#FFE699"));
                         break;
@@ -453,15 +489,21 @@ public class BeerColorFragment extends Fragment {
                 }
             }
         });
-
+        //create the on click listener for the reset button
         resetButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //set the text to null
                 inputValue.setText("");
+                //set the text to null
                 inputValue2.setText("");
+                //set the text to null
                 inputValue3.setText("");
+                //set the text to null
                 batchSize.setText("");
+                //set the text to null
                 srmResult.setText("0.0");
+                //set the text to null
                 ebcResult.setText("0.0");
             }
         });

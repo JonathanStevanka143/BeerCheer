@@ -11,8 +11,9 @@ import android.support.v7.preference.PreferenceFragmentCompat;
 
 public class PreferenceFragment extends PreferenceFragmentCompat
 {
-
+    //create the fragment manager
     FragmentManager fm;
+    //create the fragmentTransaction
     FragmentTransaction transaction;
 
     String[] address = {"beercheer@gmail.com"};
@@ -20,11 +21,13 @@ public class PreferenceFragment extends PreferenceFragmentCompat
     @Override
     public void onCreatePreferences(Bundle bundle, String s)
     {
-
+        //grab the manager
         fm = getFragmentManager();
 
+        //grab the preference
         addPreferencesFromResource(R.xml.preferences);
 
+        //create new preferences
         Preference feedbackPreference = findPreference("feedback");
         Preference callPreference = findPreference("call");
         Preference licensePreference = findPreference("license");
@@ -32,7 +35,9 @@ public class PreferenceFragment extends PreferenceFragmentCompat
         Preference learnOurStory = findPreference("aboutUs");
         Preference locationPreference = findPreference("location");
 
-
+        /**
+         * Create the on preference click listeners below
+         */
         learnOurStory.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override
             public boolean onPreferenceClick(Preference preference) {

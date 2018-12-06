@@ -68,18 +68,26 @@ public class aboutUsFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_about_us, container, false);
-        
+
+        //create the button for the emailintent
         Button emailButton = view.findViewById(R.id.emailButton);
+        //create the button for the callintent
         Button callButton = view.findViewById(R.id.callButton);
+        //create the button for the locationintent
         Button locationButton = view.findViewById(R.id.locationButton);
 
+        //create the on clicklistener for the emailbutton
         emailButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //create the intent
                 Intent intent = new Intent(Intent.ACTION_SENDTO);
+                //set the data for the intent
                 intent.setData(Uri.parse("mailto:"));
+                //put the data inside the intent on launch
                 intent.putExtra(Intent.EXTRA_EMAIL,address);
 
+                //if statement to see if the phone has the correct software to manage this request
                 if(intent.resolveActivity(getActivity().getPackageManager()) != null){
                     startActivity(intent);
                 }
@@ -89,12 +97,15 @@ public class aboutUsFragment extends Fragment {
                 }
             }
         });
-
+        //create the on clicklistener for the callbutton
         callButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //create the intent
                 Intent intent = new Intent(Intent.ACTION_VIEW);
+                //set the data for the intent
                 intent.setData(Uri.parse("tel:5196779787"));
+                //if statement to see if the phone has the correct software to manage this request
                 if(intent.resolveActivity(getActivity().getPackageManager()) != null){
                     startActivity(intent);
                 }
@@ -105,13 +116,16 @@ public class aboutUsFragment extends Fragment {
                 }
             }
         });
-
+        //create the on clicklistener for the locationButton
         locationButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //create the intent
                 Uri location = Uri.parse("geo:0,0?q=42.248204,-83.019325(St clair college");
                 Intent intent = new Intent(Intent.ACTION_VIEW);
+                //set the data for the intent
                 intent.setData(location);
+                //if statement to see if the phone has the correct software to manage this request
                 if(intent.resolveActivity(getActivity().getPackageManager()) != null){
                     startActivity(intent);
                 }

@@ -2,16 +2,21 @@ package com.example.utsav.beercheer;
 
 public class Grain
 {
-
+    //create a double value lovibond
     private double lovibond;
+    //create a string called grainName
     private String grainName;
 
+    //create a constructor for this class
     public Grain()
     {
         this.lovibond = 0.0;
         this.grainName = "";
     }
 
+    /**
+     * create getters and setters for the class
+     */
     public double getLovibond() {
         return lovibond;
     }

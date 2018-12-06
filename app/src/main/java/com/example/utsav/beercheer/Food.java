@@ -5,15 +5,17 @@ import android.os.Parcelable;
 
 public class Food implements Parcelable
 {
-
+    //create a int called foodName
     public final int foodName;
+    //create an int called foodimage
     public final int foodImage;
 
+    //create a construct for food
     public Food(int foodImage, int foodName) {
         this.foodName = foodName;
         this.foodImage = foodImage;
     }
-
+    //create a secondary construct for food
     protected Food(Parcel in) {
         foodName = in.readInt();
         foodImage = in.readInt();
